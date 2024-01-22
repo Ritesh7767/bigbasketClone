@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghee Product</title>
+    <style>
+        /* Your existing styles here */
+        .ParentNav{
+            box-shadow : rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 120px;
+            margin: auto;
+        }
+        .ParentNav > div{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            height: 45%;
+            margin: auto;
+
+        }
+        .ParentNav_child1 > a > img{
+            width: 140px;
+            height: 100%;
+        }
+        .ParentNav_child1 > input{
+            width: 50%;
+            height: 75%;
+            margin: 4px 10px 2px 0px;
+            border: 1.5px solid rgb(234, 234, 234);
+            border-radius: 5px;
+
+        }
+        .ParentNav_child1 > input:focus{
+            outline: none;
+            border: 1px solid #5E9400;
+        }
+        .ParentNav_child1 > div{
+            height: 75%;
+            margin: 4px 10px 2px 0px;
+            border-radius: 5px;
+            
+        }
+        #ParentNav_child1_div1{
+            background-color: #EEEEEE;
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        #ParentNav_child1_div1 > img{
+            width: 20px;
+            height: 20px;
+            margin: 2px;
+        }
+        #ParentNav_child1_div2{
+            background-color: #202020;
+            color: white;
+            font-weight: 550;
+            width: 100px;
+            padding: 0px 8px 0px;
+            text-align: center;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-left: 10px;
+        }
+        #Cart{
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FAE6E6;
+        }
+        #Cart > img{
+            width: 30px
+        }
+        .ParentNav_child2{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .ParentNav_child2 > button{
+            border: none;
+            height: 85%;
+            margin: 4px 10px 2px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: #5E9400;
+            position: relative;
+        }
+        .ParentNav_child2 > button > div{
+            width: 40%;
+        }
+        .ParentNav_child2 > button > div > img{
+            width: 20px;
+            
+        }
+        .ParentNav_child2 > div > img{
+            width: 200px;
+        }
+        .ParentNav_child2 > ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row ;
+            width: 65%;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 40px;
+        }
+        .ParentNav_child2 > ul > li > a:link{
+            text-decoration: none;
+            color: black;   
+        }
+        .ParentNav_child2 > ul > li > a:visited{
+            text-decoration: none;
+            color: black;
+        }
+        .ParentNav_child2 > ul > li > a:hover{
+
+            color: #CC0000;
+            text-decoration: underline;
+            text-decoration-color: #F7DADA;
+            text-decoration-thickness: 2px;
+
+        }
+        .ParentNav_child2 > div{
+            border-left: 1px solid black;
+            width: 25%;
+            box-sizing: border-box;
+            padding-right: 30px;
+            padding-top: 10px;
+        }
+        .ParentNav_child2 > div > img{
+            width: 40%;
+            float: right;
+        }
+        .OffersParentDiv{
+            width: 75%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .OffersParentDiv_child1{
+            width: 100%;
+            height: 280px;
+            margin-top: 30px;
+        }
+        .OffersParentDiv_child1 > img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }
+        .OffersParentDiv_child2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .OffersParentDiv_child2 > img{
+            width: 13%;
+            height: 40px;
+            margin: 20px 0px;
+        }
+        /* NavCss Ends here*/
+
+        /* Category Css Stars from here */
+        .parentCategory{
+        
+            flex-direction: row;
+            width: 20%;
+            height: 200px;
+            position : absolute;
+            z-index: 3;
+            top: 18%;
+            left: 10.5%;
+            display: none;
+            transition: all 0.4s;   
+            overflow: hidden;
+        }
+        .parentCategory > div{
+
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .parentCategorydiv1{
+            background-color: #202020;
+            border-radius: 5px 0px 0px 5px;
+            color: white;
+        }
+        #childDiv:hover{
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #404040;
+        }
+        .parentCategorydiv2{
+            background-color: #EEEEEE;
+        }
+        #childDiv2:hover{
+            font-size: 14px;
+            font-weight: 550;
+            background-color: #FFFFFF;
+        }
+        .parentCategorydiv3{
+            background-color: #FFFFFF;
+            border-radius: 0px 5px 5px 0px;
+        }
+        #childDiv3:hover{
+            font-size: 14px;
+            font-weight: 550;
+            background-color: #EEEEEE;
+        }
+        .parentCategorydiv1 > div, .parentCategorydiv2 > div, .parentCategorydiv3 > div{
+            border-radius: 3px;
+            width: 90%;
+            height: 30px;
+            padding-left: 10px;
+            padding-top : 10px;
+            font-size: 13px;
+        }
+        /* Category Css Ends here */
+
+        /* Location Css Starts here */
+
+        .Parentlocation{
+            display: none;
+            flex-direction: column;
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            top: 10%;
+            left: 63%;
+            transition: all 0.4s;
+            overflow: hidden;
+        }
+        .Parentlocation_child1{
+            height: 90px;
+            background-color: #E0E0E0;
+            padding: 10px 20px 10px 10px;
+            font-size: small;
+        }
+        .Parentlocation_child2{
+            background-color: white;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Parentlocation_child2 > div{
+
+            border: 1px solid black;
+            height: 75%;
+            width: 95%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .Parentlocation_child2 > div > img{
+            width: 20px;
+            height: 20px;
+        }
+        #locationInput:focus {
+            outline : none
+        }
+        #locationInput{
+            height: 70%;
+            width: 95%;
+            border: none;
+        }
+
+        /* Location Css ends here */
+
+        .toggle-filter-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2; /* Ensure it's above the filter container */
+        }
+
+        .container {
+            display: flex;
+            position: relative;
+        }
+
+        .filter-container {
+            width: 20%;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+            transition: all 0.3s;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -20%;
+            background-color: white;
+            z-index: 1;
+        }
+
+        .filter-heading {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .filter-options {
+            margin-bottom: 20px;
+        }
+
+        .filter-options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .top-section {
+            width: 80%;
+            margin-top: 20px;
+            padding: 0 20px;
+            margin-left: auto;
+        }
+
+        .top-item {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: flex-end;
+        }
+
+        .card2 {
+            position: relative;
+            border: 1px solid white;
+            box-shadow: 5px 10px 18px #f3f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            width: calc(25% - 20px);
+            margin-bottom: 20px;
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card2:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 80px; /* Adjust the height as needed */
+        }
+
+        .button-container button {
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: red;
+        }
+
+        .button {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        button {
+            border: none;
+            color: blue;
+            background-color: white;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Add the following styles */
+        .cart-btn {
+            background-color: white;
+            border: 1px solid red;
+            color: red;
+        }
+
+        .cart-btn:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .discount-btn {
+            background-color: white;
+            border: 1px solid red;
+            color: red;
+        }
+
+        .discount-btn:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .card2>h3 {
+            text-align: center;
+        }
+
+        img {
+            padding: 0px;
+            width: 100%;
+            height: auto;
+        }
+
+        .rating-box {
+            margin-top: 10px;
+        }
+
+        .star {
+            color: #FFD700;
+            font-size: 16px;
+            margin-right: 2px;
+        }
+
+        .brand-box {
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="parentCategory">
+
+        <div class="parentCategorydiv1">
+        </div>
+
+        <div class="parentCategorydiv2">
+        </div>
+
+        <div class="parentCategorydiv3">
+        </div>
+     </div>
+
+     <!-- Category html ends here -->
+    
+     <!-- Location Html starts here -->
+
+     <div class="Parentlocation">
+        <div class="Parentlocation_child1">
+            <h2>Select a location for delivery</h2>
+            <p>Choose your address location to see product availability
+                and delivery options
+            </p>
+        </div>
+        <div class="Parentlocation_child2">
+            <div>
+                <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png" alt="search logo">
+                <input type="text" id="locationInput" placeholder="Search for area or street name">
+            </div>
+        </div>
+    </div>
+
+    <!-- Location html ends here -->
+
+    <!-- Parent Navbar html starts here -->
+
+    <div class="ParentNav">
+        <div class="ParentNav_child1">
+            <a href=""><img src="https://gumlet.assettype.com/afaqs/2021-11/c9b6e415-726d-4f0b-a787-c3eff949e722/bb_Daily_with_TATA_Logo.jpg?auto=format%2Ccompress" alt="bigbasket logo"></a>
+            <input type="text" placeholder="Search for Products...">
+            <div id="ParentNav_child1_div1">
+                <img src="https://www.shareicon.net/data/256x256/2015/12/17/689050_map_512x512.png" alt="location logo">
+                <div>Select Location </div>
+            </div>
+            <div id="ParentNav_child1_div2">login/Sign Up</div>
+            <div id="Cart"><img src="https://basketballacademy.hawks.com/wp-content/uploads/2020/02/Group-5.svg" alt="Add to card logo"></div>
+        </div>
+        <div class="ParentNav_child2">
+            <button id="ShopByCategoryBtn">
+                <p>Shop by <Strong>Category</Strong></p>
+                <div><img src="https://arkitekturivirkeligheden.dk/wp-content/uploads/2018/02/white-down-arrow-png-2-e1517692151339.png"></div> 
+            </button>
+            <ul>
+                <li><a href="">Exotic Fruits and V...</a></li>
+                <li><a href="">Tea</a></li>
+                <li><a href="">Ghee</a></li>
+                <li><a href="">Nandini</a></li>
+                <li><a href="">>></a></li>
+            </ul>
+            <div><img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt="offer Image"></div>
+        </div>
+    </div>
+
+    <!-- ParentNavbar html ends here -->
+
+
+    <div class="toggle-filter-btn" id="toggleFilterBtn">Toggle Filter</div>
+
+    <div class="container">
+        <div class="filter-container">
+            <div class="filter-heading">Filter Options</div>
+            <div class="filter-options">
+                <label for="ratingFilter">Rating:</label>
+                <select id="ratingFilter">
+                    <option value="0">All Ratings</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+            <div class="filter-options">
+                <label for="varietyFilter">Variety:</label>
+                <select id="varietyFilter">
+                    <option value="0">All Varieties</option>
+                    <option value="1">Variety 1</option>
+                    <option value="2">Variety 2</option>
+                    <option value="3">Variety 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="top-section">
+            <h2>Ghee Products</h2>
+            <div id="ghee-container" class="top-item"></div>
+        </div>
+    </div>
+
+    <script>
+        const imageUrls = [
+        "https://www.bigbasket.com/media/uploads/p/m/40161682_4-fresho-pure-cow-desi-ghee.jpg?tr=w-1920,q=80",
+            "https://www.bigbasket.com/media/uploads/p/m/1214143_1-nandini-pure-ghee.jpg?tr=w-1920,q=80",
+            "https://www.bigbasket.com/media/uploads/p/m/40215102_6-bb-popular-desi-ghee.jpg?tr=w-1920,q=80",
+            "https://www.bigbasket.com/media/uploads/p/m/40315274_1-heritage-cow-ghee.jpg?tr=w-1920,q=80",
+            "https://www.bigbasket.com/media/uploads/p/m/40050539_4-amul-amul-cow-ghee-500-ml.jpg?tr=w-1920,q=80",
+            "https://www.bigbasket.com/media/uploads/p/m/40000092_4-gemini-vanaspati.jpg?tr=w-1920,q=80",
+            "https://www.bigbasket.com/media/uploads/p/m/40000092_4-gemini-vanaspati.jpg?tr=w-1920,q=80",
+            "https://www.bigbasket.com/media/uploads/p/m/40279133_4-auric-a2-ghee-rich-in-calcium-protein-grainy-rich-texture.jpg?tr=w-1920,q=80",
+
+            ,
+
+
+             "https://www.bigbasket.com/media/uploads/p/m/40198153_4-himalayan-natives-cow-ghee-a2-gir.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40310823_1-pure-whites-a2-vedic-cow-ghee-handmade-lab-tested.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40292486_1-natures-trunk-ultra-premium-a2-gir-cow-ghee-bilona-method.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40265739_1-jivika-naturals-kutch-a2-kankrej-cow-ghee-natural-rich-in-aroma-from-gujarat.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/1223130_1-barosi-cultured-cow-ghee-500-ml-cold-pressed-mustard-oil-750-ml.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40301165_2-humpy-farms-desi-cow-ghee-standard.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40233809_1-himalayan-natives-festive-gift-box-large-100-natural-healthy.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/1223077_1-sri-sri-tattva-sri-sri-tattva-essentials-combo-ghee-1litre-and-honey-500gm.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/1220630_1-anveshan-a2-vedic-bilona-cow-ghee-500-ml-raw-organic-multi-floral-honey-500-ml.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40292486_1-natures-trunk-ultra-premium-a2-gir-cow-ghee-bilona-method.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40224792_1-ashtavinayak-kachora-shahi-ghee-source-of-energy-improves-immunity.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40187250_1-umang-jk-dairy-danedar-shuddh-ghee.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/1223134_1-barosi-multi-floral-honey-500-g-lemon-pickle-350-g.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/1215450_1-kapiva-organic-cow-ghee-500-ml-wild-honey-pure-natural-healthy-250-g.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40315612_1-sri-sri-tattva-desi-ghee-pure-granular.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40299873_1-ammamma-s-ghee.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40316142_1-health-ways-desi-ghee.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40309501_1-farmdeck-organic-desi-ghee.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40204038_1-earthon-premium-cow-ghee-clarified-butter.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40112380_2-nutty-yogi-ghee-heeng-jeera-mirchi-tadka.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40204049_1-earthon-organic-a2-cow-ghee-clarified-butter.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/20003451_2-nand-gokul-pure-ghee.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/1214174_2-gowardhan-pure-cow-ghee.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40256988_2-namaste-india-cow-ghee-helps-cholesterol-reduces-joint-pains.jpg?tr=w-1920,q=80",
+
+             "https://www.bigbasket.com/media/uploads/p/m/40310829_1-pure-whites-desi-ghee-buffalo.jpg?tr=w-1920,q=80",
+             "https://www.bigbasket.com/media/uploads/p/m/40238826_1-farm2mamma-vedic-a2-desi-cow-bilona-ghee-rich-in-omega-3-protein-for-healthy-heart.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40200665_2-aabad-desi-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40191639_1-absolute-milk-pure-buffalo-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40198700_2-nutriorg-a2-rich-desi-gir-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40198701_2-nutriorg-a2-rich-pure-bilona-bhartiya-desi-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40299876_1-ammamma-s-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40299876_1-ammamma-s-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40212560_1-annapurna-desi-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40222975_1-provedic-kesarsaffron-infused-cows-ghee-tasty-healthy.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40191230_1-ved-a2-gir-cow-ghee-a2-milk-vedic-bilona-method.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40281362_2-indic-wisdom-a-2-gir-cow-ghee-hand-churned-rich-in-calcium-protein-grainy-texture.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40222966_1-provedic-desi-ghee-rich-taste-aroma-pure-natural.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40245737_2-choksha-organic-cow-ghee-nutrient-rich-mild-flavour.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40037971_1-aachi-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/20005456_6-organic-india-desi-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40207035_1-ved-farm-premium-pure-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40200661_2-aabad-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40200663_1-aabad-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40175771_3-sunshine-farm-cow-ghee.jpg?tr=w-1920,q=80",
+
+"https://www.bigbasket.com/media/uploads/p/m/40088204_2-thirumala-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40183731_3-milkfood-pure-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40166283_3-bpure-bilona-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40052079_4-britannia-ghee-danedar.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40191637_2-absolute-milk-pure-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40128025_4-godrej-jersey-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40217603_1-sapins-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40166276_2-amul-high-aroma-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40161134_1-dinshaws-buffalo-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/30006680_4-paras-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40210591_1-pride-of-cows-ghee-pure-cow-ghee-single-origin.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40096994_1-amul-amul-cow-ghee-1-l.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40208171_1-anveshan-a2-vedic-bilona-gir-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40292384_1-purika-desi-ghee-rich-flavour-aroma.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40253050_5-515pm-a2-ghee-desi-gir-cow-handmade-traditional-bilona-method-pure-natural-healthy.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/1214152_1-mother-dairy-pure-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40276162_1-grb-pure-buffalo-ghee-rich-in-nutrients.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40112379_3-nutty-yogi-ghee-cow-pure.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40264128_1-good-mornings-gryanulaa-cow-ghee-rich-in-vitamin-a-d.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40142291_4-gits-cow-ghee-homemade-pure-rich-in-vitamin-a.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40181938_6-namaste-india-desi-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/20001411_1-mgs-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/1214164_1-ananda-ghee-agmark-special-grade.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40235447_2-jivika-naturals-festive-gift-box-handcrafted-with-natural-organic-foods.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40067994_2-sanchi-pure-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/70000478_8-rath-vanspathi.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40259301_1-baidyanath-desi-cow-ghee-premium-rich-in-antioxidants-boosts-immunity.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40057240_2-shellys-premium-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40080700_2-gyan-desi-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40209241_1-sri-murugan-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/20003707_1-durga-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40113540_4-govind-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/30012149_3-britannia-high-aroma-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40058591_3-dodla-pure-cow-ghee-rich-natural-aroma.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/1214145_1-amul-pure-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40188156_1-thacker-dairy-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40079600_4-sumul-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40268636_1-warana-buffalo-ghee-rich-in-healthy-fats-for-strong-bones.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40052074_6-britannia-pure-cow-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40272204_1-maahi-cow-ghee-rich-aroma-improves-digestion.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40249193_1-anik-pure-ghee-made-from-cow-milk-fresh-no-preservatives.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40273684_2-manchar-farms-a2-desi-cow-ghee-rich-in-antioxidants-boosts-overall-health.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40109305_3-annapurna-ghee.jpg?tr=w-1920,q=80",
+"https://www.bigbasket.com/media/uploads/p/m/40031992_2-aavin-ghee.jpg?tr=w-1920,q=80",
+            // ... (your existing image URLs)
+        ];
+
+        let arr = [
+    {
+        "Fruits & Vegetables" : 
+            {
+                "Cuts & Sprouts" : ["Cut & Peeled Veggies", "Cut Fruit, Tender Coconut", "Fresh Juices & Milkshakes", "Fresh Salads & Sprouts", "Recipe Packs"],
+                "Exotic Fruits & Veggies" : ["Exotic Fruits", "Exotic Vegetables"],
+                "Flower Bouquets, Bunches" : ["Marigold", "Other Flowers", "Roses"],
+                "Fresh Fruits": ["Apples & Pomegranate", "Banana, Sapota & Papaya", "Fruit Baskets", "Kiwi, Melon, Citrus fruit", "Mangoes", "Seasonal Fruits"],
+                "Fresh Vegetables" : ["Beans, Brinjals & Okra","Cabbage & Cauliflower", "Cucumber & Capsicum", "Gourd, Pumpkin, Drumstick", "Leafy Vegetables", "Potato, Onion & Tomato", "Root Vegetables", "Specialty"],
+                "Herbs & Seasonings" : ["Indian & Exotic Herbs", "Lemon , Ginger & Garlic"],
+                "Organic Fruits & Vegetables" : ["Organic Fruits", "Organic Vegetables"]
+                
+            }
+    },
+    {
+        "Foodgrains, Oil & Masala" : 
+            {
+                "Atta, Flours & Sooji" : ["Atta Whole Wheat", "Rice & Other Flours", "Sooji, Maida & Besan"],
+                "Dals & Pulses" : ["Cereals & Millets", "Toor , Channa & Moong Dal"],
+                "Dry Fruits" : ["Almonds", "Cashews", "Mukhwas", "Other Dry Fruits", "Raisins"],
+                "Edible Oils & Ghee" : ["Blended Cooking Oils", "Cold Pressed Oil", "Cooking Coconut Oil", "Cotton Seed Oil", "Ghee & Vanaspati", "Gingelly Oil", "Groundnut Oil", "Olive & Canola Oils", "Other Edible Oils", "Soya & Mustard Oils", "Sunflower, Rice Bran Oil"],
+                "Masalas & Spices" : ["Blended Masalas", "Cooking Pastes", "Herbs & Seasoning", "Powdered Spices", "Whole Spices"],
+                "Organic Staples" : ["Organic Dals & Pulses", "Organic Dry Fruits", "Organic Edible Oil, Ghee", "Organic Flours", "Organic Masalas & Spices", "Organic Millet & Flours", "Organic Rice, Other Rice", "Organic Sugar, Jaggery"],
+                "Rice & Rice Products" : ["Basmati Rice", "Boiled & Steam Rice", "Poha, Sabudana & Murmura", "Raw Rice"],
+                "Salt, Sugar & Jaggery" : ["Salts", "Sugar & Jaggery", "Sugarfree Sweeteners"]
+            } 
+    },
+    {
+        "Bakery, Cakes & Dairy" : 
+            {
+                "Bakery Snacks" : ["Bread Sticks & Lavash", "BreadCrumbs & Croutons", "Cheese & Garlic Bread", "Puffs, Patties, Sandwiches"],
+                "Breads & Buns" : ["Brown, Wheat & Multigram", "Buns, Pavs & Pizza Base", "Milk, White & Sandwich"],
+                "Cakes & Pastries" : ["Birthday & Party Cakes", "Doughnuts & Mousses", "Muffins & Cup Cakes", "Pastries & Brownies", "Tea Cakes & Slice Cakes"],
+                "Cookies, Rusk & Khari" : ["Bakery Biscuits, Cookies", "Healthy Organic Cookies", "Khari & Cream Rolls","Premium Cookies", "Rusks"],
+                "Dairy" : ["Butter & Margarine", "ButterMilk and Lassi", "Cheese" , "Condensed PowderMilk", "Curd", "Flovoured, Soya Milk", "Fresh Milk", "Milk", "Paneer, Tofu & Cream", "Yogurt & Shrikhand"],
+                "Gourmet Breads": ["Bagels & Baguette", "Croissants, Bagels", "Gourmet Bread", "Panini , Focaccia & Pita"],
+                "Ice Creams & Desserts" : ["Ice Creams"],
+                "Non Dairy" : ["Dairy Free (Vegan)"]
+            }
+    },
+    {
+        "Beverages" : 
+            {
+                "Coffee" : ["Ground Coffee", "Instant Coffee"], 
+                "Energy & Soft Drinks" : ["Cold Drinks", "Icetea, Non Aerated Drink", "Non Alcoholic Drink", "Soda & Cocktail Mix", "Sports & Energy Drinks"],
+                "Fruit Juices & Drinks" : ["Juices", "Syrups & concentrates", "Unsweetened Cold Press"],
+                "Health Drink, Supplement" : ["Childrens (2-5 Yrs)","Diabetic drinks", "Glucose Powder, Tablets", "Kids(5+Yrs)", "Mens & Women"],
+                "Tea" : ["Exotic & Flavoured Tea","Green Tea", "Leaf & Dust Tea","Tea Bags"],
+                "Water" : ["Flavoured Wated", "Packed Wated", "Spring Wated"]
+            }
+    },
+    {
+        "Snacks & Branded Foods" : 
+            {
+                "Biscuits & Cookies" : ["Cookies", "Cream Biscuits & Wafers", "Glucose & Milk biscuits", "Marie , Health, Digestive", "Salted Biscuits"],
+                "Breakfast Cereals" : ["Flakes", "Granola & Cereal Bars", "Kids Cereal", "Muesli", "Oats & Porridge"], 
+                "Chocolates & Candies" : ["Chocolates", "Gift Boxes", "Mints & Chewing Gums", "Toffy , Candy & Lollypop"],
+                "Frozen Veggies & Snacks" : ["Frozen Indian Breads", "Frozen Non-Veg Snacks", "Frozen Veg-Snacks", "Frozen Vegetables"],
+                "Indian Mithai" : ["Chikki & Gajjak", "Fresh Sweets", "Tinned, Packed Sweets"],
+                "Noodle, Pasta, Vermicelli" : ["Cup Noodles", "Hakka Noodles", "Instant Noodles", "Pasta & Macaroni", "Vermicelli"],
+                "Pickles & Chutney" : ["Chutney Powder", "Lime & Mango Pickle", "Non-Veg Pickle", "Other Veg-Pickle"],
+                "Ready To Cook & Eat" : ["Breakfast & Sancks Mix", "Canned Food", "Dessert Mixes", "Heat & Eat Ready Meals", "Home Baking", "Papad ,Ready to Fry", "Soups"],
+                "Snacks & Namkeen" : ["Chips & Corn Snacks", "Namkeen & Savoury Snacks"],
+                "Spreads, Sauces, Ketchup" : ["Chilli & Soya Sauce", "Coco & Nut Spread", "Dips & Dressing", "Honey", "Jam, Conserve & Marmalade", "Mayonnaise", "Tomato Ketchup & Sauces", "Vinegar"]
+            }
+    },
+    {
+        "Beauty & Hygiene" : 
+            {
+                "Bath & Hand Wash" : ["Bath Salts & Oils", "Bathing Accessories", "Bathing Bars & Soaps", "Body Scrubs & Exfoliants", "Hand Wash & Sanitizers", "Shower Gel & Body Wash", "Talcum Powder"],
+                "Feminine Hygiene" : ["Hair Removal", "Intimate Wash & Care", "Panty Liners", "Sanitary Napkins", "Tampons & Menstrual Cups"],
+                "Fragrances & Deos" : ["Attar", "Body Sprays and Mists", "Eau De Cologne", "Eau De Parfum", "Eau De Toilette", "Gift Sets", "Men's Deodrants", "Perfume", "Women's Deodrants"],
+                "Hair Care" : ["Dry Shampoo & Conditioner", "Hair & Scalp Treatment", "Hair Color", "Hair Styling", "Shampoo & Conditioner", "Tools & Accessories"],
+                "Health & Medicine" : ["Adult Diapers", "Antiseptic & Bandages", "Ayurveda", "Cotton & Ear Buds", "Everyday Medicine", "Face Masks & Safety Gears", "Sexual Wellness", "Slimming Products", "Supplements & Proteins"],
+                "Makeup" : ["Eyes", "Face", "lips", "Makeup Accessories", "Makeup Kits & Gift Sets", "Nails"],
+                "Men's Grooming" : ["Bath & Shower", "Combos & Gift Sets", "Deodrant", "Face & Body", "Hair care & Styling", "Moustache & Beard Card", "Shaving Care", "Talc"],
+                "Oral Care" : ["Electric Toothbrush", "Floss & Tongue Cleaner", "MouthWash", "Toothbrush", "Toothpaste"],
+                "Skin care" : ["Aromatherapy", "Body Care", "Eye Care", "Face Care", "Lip Care"]
+            }
+    },
+    {
+        "Cleaning & Household" : 
+            {
+                "All Purpose Cleaners": ["Disinfectant Spray and Cleaner", "Floor & Other Cleaners", "Imported Cleaners", "Kitchen, Glass & Drains", "Metal, Furniture Cleaner", "Toilet Cleaners"],
+                "Bins & Bathroom Ware" : ["Bath Stools, Basin & Sets", "Buckets & Mugs", "Dustbins", "Hangers Clips & Rope", "Laundry, Storage Baskets", "Other Plastic Ware", "Soap Cases & Dispensers"],
+                "Car & Shoe Care" : ["Car Freshner", "Car Polish & Cleaner", "Shoe Polish", "Shoe Shiners & Brushes"],
+                "Detergents & Dishwash" : ["Descaler", "Detergent Bars", "Detergent Powder & Liquid", "Diswash Bars & Powder", "Diswash Liquids & Pastes", "Fabric Pre, Post Wash", "Imported Home Care"],
+                "Disposables, Garbage Bag" : ["Aluminium Foil, Clingwrap", "Garbage Bags", "Kitchen Rolls", "Paper napkins , Tissue Box", "Toilet Paper", "Wet Wipe, Pocket Tissues"],
+                "Fresheners & Repellents" : ["Air Freshner", "Insect Repellent", "Mosquito Repellent"],
+                "Mops, Brushes & Scrubs" : ["Brooms & Dust Pans", "Dust Cloth & Wipes", "Mops & Wipers", "Toilet & Other Brushes", "Utensil Scrub-Pad, Glove"],
+                "Party & Festive Needs" : ["Caps, Balloons & Candles", "Decorations", "Disposable Cups & Plates", "Gift wraps & Bags", "Gifts", "Seasonal Accessories"],
+                "Pooja Needs" : ["Agarbatti, Incense Sticks", "Camphor & Wicks", "Candles & Match Box", "Lamp & Lamp Oil", "Other Pooja Needs", "Pooja Thali & Bells"],
+                "Stationery" : ["Books & Magazines", "Colours & Crayons", "Electric Accessories", "Erasers & Sharpners", "Exam Pad & Pencil Box", "Games & Calculator", "Notebooks Files & Folders", "Pen, Pencils", "Scissor, Glue & Tape"]
+            }
+    },
+    {
+        "Kitchen , Garden & Pets" : 
+            {
+                "Appliances & Electricals" : ["Air Fryers & Rice Cookers", "Battery & Electrical", "Coffee Makers & Kettles", "Grills & Toasters", "Induction Cooktop", "Irons", "Juicer , Mixer & Grinder", "LED Bulbs & Batters"],
+                "Bakeware" : ["Bakeware Accessories", "Bakeware Moulds, Cutters", "Baking Tools & Brushes"],
+                "Cookware & Non Stick" : ["Cook & Serve", "Cookware Sets", "Gas Stove", "Kadai & Fry Pans", "Microwavable Cookware", "Pressure Cookers", "Tawa & Sauce Pan"],
+                "Crockery & Cutlery" : ["Cups ,Mugs & Tumblers", "Cutlery, Spoon & Fork", "Dinner Sets", "Glassware", "Plates & Bowls"],
+                "Flask & Casserole" : ["Casserole", "Vacuum Flask"],
+                "Gardening" : ["Fertilizer & Pesticides", "Gardening Tools", "Pots, Planters & Trays", "Seeds & Saplings"],
+                "Kitchen Accessories" : ["Choppers & Graters", "Kitchen Tools & Other Access...", "Knives & Peelers", "Lighters", "Strainer, Ladle & Spatula"],
+                "Pet Food & Accessories" : ["Health Supplements", "Pet cleaning & Grooming", "Pet Collars & Leashers", "Pet Meals & Treas", "Pet toys"],
+                "Steel Utensils" : ["Bowls & Vessels", "Copper Utensils", "Plates & Tumblers", "Steel Lunch Box", "Steel Storage Container"],
+                "Storage & Accessories" : ["Cloth Dryer & Iron Table", "Containers Sets", "Lunch Boxes", "Racks & Holders", "Umbrella", "Wall Hooks & Hangers", "Water & Fridge Bottles"]
+            }
+    },
+    {
+        "Eggs, Meat & Fish" : 
+            {
+                "Eggs" : ["Country Eggs", "Farm Eggs", "Other Eggs", "Protein Eggs"],
+                "Fish & Seafood" : ["Canned Seafood", "Dry Fish", "Fresh Water Fish", "Frozen Fish & Seafood", "Marine Water Fish", "Other Seafood", "Praws & Shrimps"],
+                "Marinades" : ["Marinated Meat"],
+                "Mutton & Lamb" : ["Fresh Mutton", "Frozen Mutton"],
+                "Pork & Other Meats" : ["Fresh & Frozen Pork"],
+                "Poultry" : ["Duck & Goose", "Fresh Chicken","Frozen Chicken", "Turkey"],
+                "Sausages, Bacon & Salami" : ["Chicken Sausages", "Lamb", "Pork & Ham","Turkey & Duck"]
+            }
+    },
+    {
+        "Gourmet & World Food" : 
+            {
+                "Cereals & Breakfast" : ["Cereal & Granola Bars","Gourmet Flakes","Imported Oats & Porridge","Muesli & Rice Cakes"],
+                "Chocolates & Biscuits" : ["Cookies, Biscottie, Wafer","Crackers & Digestive","International Chocolates","Luxury Chocolates, Gifts","Marshmallow, Candy, Jerry"],
+                "Cooking & Baking Needs" : ["Baking Accessories","Baking ,Cake Decorations","Cooking Chocolate,Cocoa","Curry Pasta, Coconut Milk","Exotic Sugar & Salt","Flour & Pre-Mixes","Herbs, Seasoning & Rubs","Quinoa & Grains"],
+                "Dairy & Cheese" : ["Butter & Cream","Cream & Cheese Spreads","Flavoured & Greek Yogurt","Gourmet Ice Cream","International Cheese","Milk & Soya Drinks","Tofu"],
+                "Drinks & Beverages" : ["Aerated,Still,Sparkling","Cocktail Mixes","Coffee & Pre-Mix","Gourmet Juices & Drinks","Gourmet Tea & Tea Bags","Health Drinks","Non-Alcoholic Beer,Wine"],
+                "Oils & Vinegar" : ["Balsamic & Cider Vinegar","Canola & Rapeaseed Oil","Extra Virgin Olive Oil", "Flavoured & Other Oils", "Organic & Cold Press Oil", "Pure, Pomace Olive Oil", "Regualar & White Vinegar", "Wine & Rice Vinegar"],
+                "Pasta, Soup & Noodles" : ["Imported Noodles", "Imported Soups", "Jasmine & Sushi Rice", "Pastas & Spaghetti"],
+                "Sauces, Spreads & Dips" : ["Chocolate, Peanut Spread", "Honey & Maple Syrup" ,"Hummus, Cheese, Salsa Dip", "Jams, Marmalade, Spreads", "Salad Dressings", "Thai & Asain Sauces"],
+                "Snacks, Dry Fruits, Nuts" : ["Dry Fruits & Berries", "Gourmet Popcorn", "Healthy, Baked Snacks", "Nachos & Chips", "Roasted Seeds & Nuts", "Trail & Cocktail Mixes"],
+                "Tinned & Processed Food" : ["Beans & Pulses", "Fish & Tuna", "Fruits & Pulps", "Meats & Sausages", "Olive, Jalapeno, Gherkin", "Tomatoes & Vegetables"]
+            }
+    },
+    {
+        "Baby Care" : 
+            {
+                "Baby Accessories" : ["Baby Gear & Outdoor", "Baby Toys", "Combs , Brushes, Clippers", "Kids Deo", "Other Baby Accessories", "Soothers & Teethers"],
+                "Baby Bath & Hygiene" : ["Baby Bath", "Baby Buds", "Baby Creams & Lotions", "Baby Gift Sets", "Baby Health", "Baby laundry", "Baby Oil & Shampoo", "Baby Oral Care", "Baby Powder"],
+                "Baby Food & Formula" : ["Baby Food", "Infant Formula", "Lactose Free Baby Food & Fo...", "Organic Baby Food"],
+                "Diapers & Wipes" : ["Baby Wipes", "Diapers", "Nappies & Rash Cream"],
+                "Feeding & Nursing" : ["Baby Dishes & Utensils", "Bibs & Napkins", "Nursing Tools", "Sippers & Bottles"],
+                "Mothers & Maternity" : ["Meternity Health Supplements", "Meternity Personal Care"]
+            }
+    },
+    {
+        "Paan Corner" : 
+            {
+                "Smoking Supplies" : ["Quit Smoking Alternatives", "Smoking Accessories"]
+            }
+    }
+]
+
+// Category code start from here
+
+function appendCategoryData(){
+
+    let parentCategorydiv1 = document.querySelector(".parentCategorydiv1")
+
+    arr.forEach(function(ele){
+        for(let key in ele){
+
+            let childDiv = document.createElement("div")
+            childDiv.append(key)
+            childDiv.setAttribute("id", "childDiv")
+            childDiv.addEventListener("mouseover", function(){
+
+                let parentCategorydiv2 = document.querySelector(".parentCategorydiv2")
+                parentCategorydiv2.innerHTML = ""
+
+                for(let innerKey in ele[key]){
+
+                    let childDiv2 = document.createElement("div")
+                    childDiv2.id = "childDiv2"
+                    childDiv2.append(innerKey)
+                    childDiv2.addEventListener("mouseover", function(){
+
+                        let parentCategorydiv3 = document.querySelector(".parentCategorydiv3")
+                        parentCategorydiv3.innerHTML = ""
+
+                        for(let innerList of ele[key][innerKey]){
+                            let childDiv3 = document.createElement("div")
+                            childDiv3.id = "childDiv3"
+                            childDiv3.append(innerList)
+                            parentCategorydiv3.append(childDiv3)
+                        }
+                    })
+                    parentCategorydiv2.append(childDiv2)
+                }
+                
+            })
+            parentCategorydiv1.append(childDiv)
+
+        }
+    })
+    
+}
+
+appendCategoryData()
+
+// Category Code Ends Here
+
+
+// Category Code stars form here
+
+CategoryBtn = document.querySelector(".ParentNav_child2 > button")
+CategoryBtn.addEventListener("click", function(){
+
+    let parentCategory = document.querySelector(".parentCategory")
+    // parentCategory.style.transition = "all 2s"
+
+    if(parentCategory.style.display === "none"){
+        parentCategory.style.display = "flex"
+
+        CategoryBtn.addEventListener("mouseover", function(){
+
+            parentCategory.style.width = "50%"
+            parentCategory.style.height = "500px"
+        })
+
+        CategoryBtn.addEventListener("mouseout", function(){
+            parentCategory.style.width = "50%"
+            parentCategory.style.height = "500px"
+        })
+    }
+    else{
+        parentCategory.style.display = "none"
+        parentCategory.style.width = "20%"
+        parentCategory.style.height = "200px"
+    
+    }
+})
+
+// Category Code Ends Here
+
+// Location Code starts form here
+
+let SelectLocationBtn = document.querySelector("#ParentNav_child1_div1")
+let Parentlocation = document.querySelector(".Parentlocation")
+
+SelectLocationBtn.addEventListener("click", function(){
+    
+
+    if(Parentlocation.style.display === "none"){
+        Parentlocation.style.display = "flex"
+        SelectLocationBtn.addEventListener("mouseover", function(){
+          Parentlocation.style.width = "300px"  
+          Parentlocation.style.height = "150px"
+        })
+        SelectLocationBtn.addEventListener("mouseout", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+    }
+    else{
+        Parentlocation.style.display = "none"
+        Parentlocation.style.width = "100px"
+        Parentlocation.style.height = "100px"
+    }
+
+})
+
+let Cart = document.querySelector("#Cart")
+
+Cart.addEventListener("click", function(){
+
+    if(Parentlocation.style.display === "none"){
+        Parentlocation.style.display = "flex"
+        Cart.addEventListener("mouseover", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+        Cart.addEventListener("mouseout", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+    }
+    else{
+        Parentlocation.style.display = "none"
+        Parentlocation.style.width = "100px"
+        Parentlocation.style.height = "100px"
+    }
+})
+
+
+let ExoticFruitsVeggies = document.querySelectorAll(".ParentNav_child2 > ul > li > a")
+console.log(ExoticFruitsVeggies)
+
+let pages = ["exoticFruitsVegetables.html", "tea.html", "Ghee page.html", "Nandini.html"]
+
+for(let x = 0; x < pages.length; x++){
+    ExoticFruitsVeggies[x].href = pages[x]
+    // console.log(ExoticFruitsVeggies[x])
+}
+
+let homePage = document.querySelector(".ParentNav_child1 > a")
+homePage.href = "HomePage.html"
+
+
+
+// Category Code Ends Here
+
+
+        const gheeProducts = imageUrls.map((imageUrl, index) => ({
+            image: imageUrl,
+            name: `Product ${index + 1}`,
+            description: `Description for Product ${index + 1}`,
+            price: (index + 1) * 5,
+            discountPercentage: index % 5 + 5,
+            rating: (Math.random() * 5).toFixed(1),
+            brand: `Brand ${index % 3 + 1}`,
+            variety: `Variety ${(index % 3) + 1}`
+        }));
+
+        function createGheeCard(product) {
+            const gheeCard = document.createElement('div');
+            gheeCard.classList.add('card2');
+
+            const gheeImage = document.createElement('img');
+            gheeImage.src = product.image;
+            gheeImage.alt = product.name;
+
+            const gheeTitle = document.createElement('h3');
+            gheeTitle.textContent = product.name;
+
+            const gheeDescription = document.createElement('p');
+            gheeDescription.textContent = product.description;
+
+            const gheePrice = document.createElement('p');
+            gheePrice.textContent = `Price: $${product.price}`;
+
+            const gheeDiscount = document.createElement('p');
+            gheeDiscount.textContent = `Discount: ${product.discountPercentage}% off`;
+
+            const ratingBox = document.createElement('div');
+            ratingBox.classList.add('rating-box');
+            ratingBox.textContent = `Rating: ${product.rating}`;
+            for (let i = 0; i < 5; i++) {
+                const star = document.createElement('span');
+                star.classList.add('star');
+                if (i < Math.floor(product.rating)) {
+                    star.textContent = '★';
+                } else {
+                    star.textContent = '☆';
+                }
+                ratingBox.appendChild(star);
+            }
+
+            const brandBox = document.createElement('div');
+            brandBox.classList.add('brand-box');
+            brandBox.textContent = `Brand: ${product.brand}`;
+
+            const varietyBox = document.createElement('div');
+            varietyBox.classList.add('brand-box');
+            varietyBox.textContent = `Variety: ${product.variety}`;
+
+            const buttonContainer = document.createElement('div');
+            buttonContainer.classList.add('button-container');
+
+            const addToCartBtn = document.createElement('button');
+            addToCartBtn.classList.add('cart-btn');
+            addToCartBtn.textContent = 'Add to Cart';
+
+            const discountBtn = document.createElement('button');
+            discountBtn.classList.add('discount-btn');
+            discountBtn.textContent = 'Apply Discount';
+
+            discountBtn.addEventListener('click', () => {
+                console.log(`Applied discount for ${product.name}!`);
+            });
+
+            buttonContainer.appendChild(addToCartBtn);
+            buttonContainer.appendChild(discountBtn);
+
+            gheeCard.appendChild(gheeImage);
+            gheeCard.appendChild(gheeTitle);
+            gheeCard.appendChild(gheeDescription);
+            gheeCard.appendChild(gheePrice);
+            gheeCard.appendChild(gheeDiscount);
+            gheeCard.appendChild(ratingBox);
+            gheeCard.appendChild(brandBox);
+            gheeCard.appendChild(varietyBox);
+            gheeCard.appendChild(buttonContainer);
+
+            return gheeCard;
+        }
+
+        const gheeContainer = document.getElementById('ghee-container');
+
+        gheeProducts.forEach((product) => {
+            const gheeCard = createGheeCard(product);
+            gheeContainer.appendChild(gheeCard);
+        });
+
+        const filterBtn = document.getElementById('toggleFilterBtn');
+        const filterContainer = document.querySelector('.filter-container');
+
+        filterBtn.addEventListener('click', () => {
+            filterContainer.style.left = filterContainer.style.left === '0%' ? '-20%' : '0%';
+        });
+    </script>
+</body>
+
+</html>
+
+

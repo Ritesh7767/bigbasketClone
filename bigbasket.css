@@ -1,0 +1,378 @@
+body {
+    padding: 20px;
+}
+.ParentNav{
+    box-shadow : rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 120px;
+    margin: auto;
+}
+.ParentNav > div{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 45%;
+    margin: auto;
+
+}
+.ParentNav_child1 > a > img{
+    width: 140px;
+    height: 100%;
+}
+.ParentNav_child1 > input{
+    width: 50%;
+    height: 75%;
+    margin: 4px 10px 2px 0px;
+    border: 1.5px solid rgb(234, 234, 234);
+    border-radius: 5px;
+
+}
+.ParentNav_child1 > input:focus{
+    outline: none;
+    border: 1px solid #5E9400;
+}
+.ParentNav_child1 > div{
+    height: 75%;
+    margin: 4px 10px 2px 0px;
+    border-radius: 5px;
+    
+}
+#ParentNav_child1_div1{
+    background-color: #EEEEEE;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#ParentNav_child1_div1 > img{
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
+#ParentNav_child1_div2{
+    background-color: #202020;
+    color: white;
+    font-weight: 550;
+    width: 100px;
+    padding: 0px 8px 0px;
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+#Cart{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAE6E6;
+}
+#Cart > img{
+    width: 30px
+}
+.ParentNav_child2{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.ParentNav_child2 > button{
+    border: none;
+    height: 85%;
+    margin: 4px 10px 2px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #5E9400;
+    position: relative;
+}
+.ParentNav_child2 > button > div{
+    width: 40%;
+}
+.ParentNav_child2 > button > div > img{
+    width: 20px;
+    
+}
+.ParentNav_child2 > div > img{
+    width: 200px;
+}
+.ParentNav_child2 > ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row ;
+    width: 65%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+}
+.ParentNav_child2 > ul > li > a:link{
+    text-decoration: none;
+    color: black;   
+}
+.ParentNav_child2 > ul > li > a:visited{
+    text-decoration: none;
+    color: black;
+}
+.ParentNav_child2 > ul > li > a:hover{
+
+    color: #CC0000;
+    text-decoration: underline;
+    text-decoration-color: #F7DADA;
+    text-decoration-thickness: 2px;
+
+}
+.ParentNav_child2 > div{
+    border-left: 1px solid black;
+    width: 25%;
+    box-sizing: border-box;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+.ParentNav_child2 > div > img{
+    width: 40%;
+    float: right;
+}
+.OffersParentDiv{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.OffersParentDiv_child1{
+    width: 100%;
+    height: 280px;
+    margin-top: 30px;
+}
+.OffersParentDiv_child1 > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.OffersParentDiv_child2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.OffersParentDiv_child2 > img{
+    width: 13%;
+    height: 40px;
+    margin: 20px 0px;
+}
+/* NavCss Ends here*/
+
+/* Category Css Stars from here */
+.parentCategory{
+
+    flex-direction: row;
+    width: 20%;
+    height: 200px;
+    position : absolute;
+    z-index: 3;
+    top: 18%;
+    left: 10.5%;
+    display: none;
+    transition: all 0.4s;   
+    overflow: hidden;
+}
+.parentCategory > div{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.parentCategorydiv1{
+    background-color: #202020;
+    border-radius: 5px 0px 0px 5px;
+    color: white;
+}
+#childDiv:hover{
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #404040;
+}
+.parentCategorydiv2{
+    background-color: #EEEEEE;
+}
+#childDiv2:hover{
+    font-size: 14px;
+    font-weight: 550;
+    background-color: #FFFFFF;
+}
+.parentCategorydiv3{
+    background-color: #FFFFFF;
+    border-radius: 0px 5px 5px 0px;
+}
+#childDiv3:hover{
+    font-size: 14px;
+    font-weight: 550;
+    background-color: #EEEEEE;
+}
+.parentCategorydiv1 > div, .parentCategorydiv2 > div, .parentCategorydiv3 > div{
+    border-radius: 3px;
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    padding-top : 10px;
+    font-size: 13px;
+}
+/* Category Css Ends here */
+
+/* Location Css Starts here */
+
+.Parentlocation{
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    height: 75px;
+    position: absolute;
+    top: 10%;
+    left: 63%;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+.Parentlocation_child1{
+    height: 90px;
+    background-color: #E0E0E0;
+    padding: 10px 20px 10px 10px;
+    font-size: small;
+}
+.Parentlocation_child2{
+    background-color: white;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Parentlocation_child2 > div{
+
+    border: 1px solid black;
+    height: 75%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Parentlocation_child2 > div > img{
+    width: 20px;
+    height: 20px;
+}
+#locationInput:focus {
+    outline : none
+}
+#locationInput{
+    height: 70%;
+    width: 95%;
+    border: none;
+}
+
+/* Location Css ends here */
+a {
+    text-decoration: none;
+}
+
+.filterParent{
+    display: flex;
+    flex-direction: row;
+}
+.fitlerParent {
+    border: 2px solid black;
+}
+
+input[type="range"] {
+    width: 60px;
+    appearance: none;
+    height: 20px;
+    background: rgb(169, 169, 169); /* Red for off */
+    outline: none;
+    border-radius: 10px;
+    margin: 0;
+    transition: background 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(220, 220, 220); /* Green for on */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]:checked {
+    background: red; /* Green for on */
+}
+
+.img1 {
+    height: 150px;
+    width: auto;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#items{
+    display: grid;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+}
+
+.items1{
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 340px;
+    width: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.item-name {
+    text-align: center;
+    font-weight: bold;
+}
+
+.addtocart{
+    align-items: center;
+}
+
+button {
+    height: 35px;
+    width: 160px;
+    cursor: pointer;
+}
+
+#filter-btn {
+    height: 40px;
+    width: 150px;
+}
+
+input {
+    cursor: pointer;
+    
+}
+
+.addtocart {
+    border-color: red;
+    color: red;
+    text-decoration: red;
+    border-radius: 5px;
+}
+.addtocart:hover{
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    text-decoration: white;
+}

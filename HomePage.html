@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        .parent ,.best_seller{
+            background-color: rgb(247, 247, 247);
+            /* border: 2px solid rgb(222, 213, 213); */
+            width: 70%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .container, .best_seller_container{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin: auto;
+        }
+        #head_div, #bestSellerDiv{
+            display: flex;
+            flex-direction: column;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            width: 24%;
+            height: 450px;
+            background-color: white;
+            position: relative;
+            border-radius: 10px;
+            transition: all 0.4s;
+        }
+        #head_div:hover, #bestSellerDiv:hover{
+
+            box-shadow : rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        }
+        #head_div > img, #bestSellerDiv > img{
+            width: 90%;
+            height : 175px;
+            display: inline-block;
+            margin: 0px 20px 20px;
+            /* margin-top: 0px; */
+            position: relative;
+            margin: auto;
+            border: 1px solid lightgray;
+
+        }
+        #head_div > p, #head_div > span, #bestSellerDiv > p, #bestSellerDiv > span{
+            margin-left: 10px;
+            margin-top: 2px;
+            height : 25px;
+        }
+        #Smartdiscount{
+            position: absolute;
+            background-color: green;
+            border-radius: 10px 0 10px 0;
+            margin: 0;
+            padding: 0;
+            left: -2px;
+            top: -2px;
+        }
+        #dropDown{
+            width: 90%;
+            margin: auto;
+            height: 100px;
+            background-color: red;
+        }
+        #dropDown_container{
+            background-color: white;
+            position: absolute;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            left : 90px;
+            z-index: 1;
+            width: 300px;
+        }
+        #dropDown_container > div{
+            border: 1px solid rgb(226, 226, 226);
+            margin: 10px;
+            text-align: left;
+            position: relative;
+            transition: all 0.5s;
+        }
+        #dropDown_container > div:hover{
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }
+        #dropDown_container_div button{
+            color: black;
+            background-color: red;
+            position: absolute;
+            left : 80%;
+            bottom: 10%;
+        }
+        .bank_offers, .topOffers, .fruitsVegetables, .Snacks, .cleaningHousehold, .Staples, .beverages, .beautyHygiene, .homeKitchen, .BrandStore{
+            margin-top:7px;
+            margin-bottom:7px;
+            width: 70%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+        .offers_container, .topOffers_Container, .fruitsVegetables_container, .Snacks_container, .cleaningHousehold_container, .Staples_container, .beverages_container, .beautyHygiene_container, .homeKitchen_container, .brandStore_container{
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .offers_container > div, #topOffers_div, #container_div{
+            width: 23%;
+            margin: auto;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+            transition: all 0.2s;
+        }
+        .offers_container > div:hover{
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        }
+        #topOffers_div:hover{
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        }
+        .offers_container img, #topOffers_div img, #container_div > img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .section{
+            width: 90%;
+            margin: auto;
+        }
+        #SaveButton{
+            display: flex;
+            flex-direction: row;
+            margin: 40px 10px 2px;
+
+        }
+        #AddButton{
+            width: 80%;
+            border-radius : 5px;
+            margin-left: 10px;
+            box-sizing: border-box;
+            border: 1px solid red;
+            background-color: white;
+            color: #CC0000;
+            font-weight: bold;
+            transition: all 0.5s;
+            
+        }
+        #AddButton:hover{
+            background-color: #CC0000;
+            color: white;
+        }
+        #bookmark{
+            width: 20%;
+            height: 40px;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            border: 1px solid black;
+            background-color: white;
+        }
+        #bookmark img{
+            width: 30px;
+            height: 25px;
+        }
+        #BestSellerSaveButton{
+            display: flex;
+            flex-direction: row;
+            /* margin: 20px 10px 2px  */
+        }
+        .Staples_container > div, .beverages_container > div,
+        .beautyHygiene_container > div, .homeKitchen_container > div{
+            width: 17px;
+            height: 100px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }
+        #container_div:hover{
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        }
+        
+        .section{
+            width: 70%;
+            margin: auto;
+        }   
+        .section > p{
+            color: #606060;
+        }
+        footer{
+            background-color: rgb(16, 16, 16);
+            color: white;
+        }
+        .upper, .lower{
+            width: 70%;
+            margin: auto;
+        }
+        .upper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .upper >{
+            width: 33.33%;
+        }
+        .upper > ul > li > a{
+            display: inline-block;
+            margin-top: 9px;
+            color: #DDDDDD;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .upper > ul > li > a:hover{
+            text-decoration: underline;
+        }
+        .lower > h2{
+            text-align: center;
+        }
+        .lower p{
+            font-size: 13px;
+            color: #DDDDDD;
+            text-align: center;
+        }
+        .lower > hr{
+            border: 0.1px dotted #DDDDDD;
+        }
+        .upper > ul{
+            list-style-type: none;
+        }
+        /* NavBar Css Starts here*/
+        .ParentNav{
+            box-shadow : rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 120px;
+            margin: auto;
+        }
+        .ParentNav > div{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            height: 45%;
+            margin: auto;
+
+        }
+        .ParentNav_child1 > a > img{
+            width: 140px;
+            height: 100%;
+        }
+        .ParentNav_child1 > input{
+            width: 50%;
+            height: 75%;
+            margin: 4px 10px 2px 0px;
+            border: 1.5px solid rgb(234, 234, 234);
+            border-radius: 5px;
+
+        }
+        .ParentNav_child1 > input:focus{
+            outline: none;
+            border: 1px solid #5E9400;
+        }
+        .ParentNav_child1 > div{
+            height: 75%;
+            margin: 4px 10px 2px 0px;
+            border-radius: 5px;
+            
+        }
+        #ParentNav_child1_div1{
+            background-color: #EEEEEE;
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        #ParentNav_child1_div1 > img{
+            width: 20px;
+            height: 20px;
+            margin: 2px;
+        }
+        #ParentNav_child1_div2{
+            background-color: #202020;
+            color: white;
+            font-weight: 550;
+            width: 100px;
+            padding: 0px 8px 0px;
+            text-align: center;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-left: 10px;
+        }
+        #Cart{
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FAE6E6;
+        }
+        #Cart > img{
+            width: 30px
+        }
+        .ParentNav_child2{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+        .ParentNav_child2 > button{
+            border: none;
+            height: 85%;
+            margin: 4px 10px 2px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: #5E9400;
+            position: relative;
+        }
+        .ParentNav_child2 > button > div{
+            width: 40%;
+        }
+        .ParentNav_child2 > button > div > img{
+            width: 20px;
+            
+        }
+        .ParentNav_child2 > div > img{
+            width: 200px;
+        }
+        .ParentNav_child2 > ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row ;
+            width: 65%;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 40px;
+        }
+        .ParentNav_child2 > ul > li > a:link{
+            text-decoration: none;
+            color: black;   
+        }
+        .ParentNav_child2 > ul > li > a:visited{
+            text-decoration: none;
+            color: black;
+        }
+        .ParentNav_child2 > ul > li > a:hover{
+
+            color: #CC0000;
+            text-decoration: underline;
+            text-decoration-color: #F7DADA;
+            text-decoration-thickness: 2px;
+
+        }
+        .ParentNav_child2 > div{
+            border-left: 1px solid black;
+            width: 25%;
+            box-sizing: border-box;
+            padding-right: 30px;
+            padding-top: 10px;
+        }
+        .ParentNav_child2 > div > img{
+            width: 40%;
+            float: right;
+        }
+        .OffersParentDiv{
+            width: 75%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .OffersParentDiv_child1{
+            width: 100%;
+            height: 280px;
+            margin-top: 30px;
+        }
+        .OffersParentDiv_child1 > img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+        }
+        .OffersParentDiv_child2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .OffersParentDiv_child2 > img{
+            width: 13%;
+            height: 40px;
+            margin: 20px 0px;
+        }
+        /* NavCss Ends here*/
+
+        /* Category Css Stars from here */
+        .parentCategory{
+        
+            flex-direction: row;
+            width: 20%;
+            height: 200px;
+            position : absolute;
+            z-index: 3;
+            top: 18%;
+            left: 10.5%;
+            display: none;
+            transition: all 0.4s;   
+            overflow: hidden;
+        }
+        .parentCategory > div{
+
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .parentCategorydiv1{
+            background-color: #202020;
+            border-radius: 5px 0px 0px 5px;
+            color: white;
+        }
+        #childDiv:hover{
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #404040;
+        }
+        .parentCategorydiv2{
+            background-color: #EEEEEE;
+        }
+        #childDiv2:hover{
+            font-size: 14px;
+            font-weight: 550;
+            background-color: #FFFFFF;
+        }
+        .parentCategorydiv3{
+            background-color: #FFFFFF;
+            border-radius: 0px 5px 5px 0px;
+        }
+        #childDiv3:hover{
+            font-size: 14px;
+            font-weight: 550;
+            background-color: #EEEEEE;
+        }
+        .parentCategorydiv1 > div, .parentCategorydiv2 > div, .parentCategorydiv3 > div{
+            border-radius: 3px;
+            width: 90%;
+            height: 30px;
+            padding-left: 10px;
+            padding-top : 10px;
+            font-size: 13px;
+        }
+        /* Category Css Ends here */
+
+        /* Location Css Starts here */
+
+        .Parentlocation{
+            display: none;
+            flex-direction: column;
+            width: 150px;
+            height: 75px;
+            position: absolute;
+            top: 10%;
+            left: 63%;
+            transition: all 0.4s;
+            overflow: hidden;
+        }
+        .Parentlocation_child1{
+            height: 90px;
+            background-color: #E0E0E0;
+            padding: 10px 20px 10px 10px;
+            font-size: small;
+        }
+        .Parentlocation_child2{
+            background-color: white;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Parentlocation_child2 > div{
+
+            border: 1px solid black;
+            height: 75%;
+            width: 95%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .Parentlocation_child2 > div > img{
+            width: 20px;
+            height: 20px;
+        }
+        #locationInput:focus {
+            outline : none
+        }
+        #locationInput{
+            height: 70%;
+            width: 95%;
+            border: none;
+        }
+
+        /* Location Css ends here */
+    </style>
+</head>
+
+<body>
+    <!-- Category html start here -->
+    <div class="parentCategory">
+
+        <div class="parentCategorydiv1">
+        </div>
+
+        <div class="parentCategorydiv2">
+        </div>
+
+        <div class="parentCategorydiv3">
+        </div>
+     </div>
+
+     <!-- Category html ends here -->
+    
+     <!-- Location Html starts here -->
+
+     <div class="Parentlocation">
+        <div class="Parentlocation_child1">
+            <h2>Select a location for delivery</h2>
+            <p>Choose your address location to see product availability
+                and delivery options
+            </p>
+        </div>
+        <div class="Parentlocation_child2">
+            <div>
+                <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png" alt="search logo">
+                <input type="text" id="locationInput" placeholder="Search for area or street name">
+            </div>
+        </div>
+    </div>
+
+    <!-- Location html ends here -->
+
+    <!-- Parent Navbar html starts here -->
+
+    <div class="ParentNav">
+        <div class="ParentNav_child1">
+            <a href=""><img src="https://gumlet.assettype.com/afaqs/2021-11/c9b6e415-726d-4f0b-a787-c3eff949e722/bb_Daily_with_TATA_Logo.jpg?auto=format%2Ccompress" alt="bigbasket logo"></a>
+            <input type="text" placeholder="Search for Products...">
+            <div id="ParentNav_child1_div1">
+                <img src="https://www.shareicon.net/data/256x256/2015/12/17/689050_map_512x512.png" alt="location logo">
+                <div>Select Location </div>
+            </div>
+            <div id="ParentNav_child1_div2">login/Sign Up</div>
+            <div id="Cart"><img src="https://basketballacademy.hawks.com/wp-content/uploads/2020/02/Group-5.svg" alt="Add to card logo"></div>
+        </div>
+        <div class="ParentNav_child2">
+            <button id="ShopByCategoryBtn">
+                <p>Shop by <Strong>Category</Strong></p>
+                <div><img src="https://arkitekturivirkeligheden.dk/wp-content/uploads/2018/02/white-down-arrow-png-2-e1517692151339.png"></div> 
+            </button>
+            <ul>
+                <li><a href="">Exotic Fruits and V...</a></li>
+                <li><a href="">Tea</a></li>
+                <li><a href="">Ghee</a></li>
+                <li><a href="">Nandini</a></li>
+                <li>>></li>
+            </ul>
+            <div><img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt="offer Image"></div>
+        </div>
+    </div>
+
+    <!-- ParentNavbar html ends here -->
+
+    <div class="OffersParentDiv">
+        <div class="OffersParentDiv_child1"><img src="https://www.bigbasket.com/media/uploads/banner_images/B2C121907338-13827-b2c-web-l1-c-20-01-24-all.jpg?tr=w-1920,q=80" alt="loreal offer"></div>
+        <div class="OffersParentDiv_child2">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_250923_01.png?tr=w-1920,q=80" alt="">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_250923_02.png?tr=w-1920,q=80" alt="">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_250923_03.png?tr=w-1920,q=80" alt="">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_250923_03.png?tr=w-1920,q=80" alt="">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_250923_05.png?tr=w-1920,q=80" alt="">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/hp_topstrip_m_250923_06.png?tr=w-1920,q=80" alt="">
+        </div>
+    </div>
+    <div class="parent">
+        <h2>My Smart Basket</h2>
+        <div class="container"></div>
+    </div>
+    <div class="bank_offers">
+
+        <h2>Bank Offers</h2>
+        <div class="offers_container"></div>
+    
+    </div>
+    <div class="best_seller">
+        <h2>Best Sellers</h2>
+        <div class="best_seller_container"></div>
+    </div>
+
+    <div class="topOffers">
+        <h2>Top Offers</h2>
+        <div class="topOffers_Container"></div>
+    </div>
+
+    <div class="fruitsVegetables">
+        <h2>Fruits and Vegetables</h2>
+        <div class="fruitsVegetables_container"></div>
+    </div>
+    
+    <div class="Staples">
+        <h2>Your Daily Staples</h2>
+        <div class="Staples_container"></div>
+    </div>
+
+    <div class="beverages">
+        <h2>Beverages</h2>
+        <div class="beverages_container"></div>
+    </div>
+
+    <div class="Snacks">
+        <h2>Snacks Store</h2>
+        <div class="Snacks_container"></div>
+    </div>
+
+    <div class="cleaningHousehold">
+        <h2>Cleaning Household</h2>
+        <div class="cleaningHousehold_container"></div>
+    </div>
+
+    <div class="beautyHygiene">
+        <h2>Beauty and Hygiene</h2>
+        <div class="beautyHygiene_container"></div>
+    </div>
+
+    <div class="homeKitchen">
+        <h2>Home and Kitchen</h2>
+        <div class="homeKitchen_container"></div>
+    </div>
+    <div class="BrandStore">
+        <h2>Brand Store</h2>
+        <div class="brandStore_container"></div>
+    </div>
+
+
+    <div class="section">
+        <h3>bigbasket – online grocery store</h3>
+        <p>Did you ever imagine that the freshest of fruits and vegetables, top-quality pulses and food grains, dairy products, and hundreds of branded items could be handpicked and delivered to your home, all at the click of a button? In today's fast-paced world, bigbasket.com, India's pioneering online grocery store, continues to bring a staggering array of over 40,000 products from more than 1,000 brands to the doorsteps of over 10 million satisfied customers. From essential household cleaning products to the latest beauty and makeup trends, bigbasket remains your one-stop shop for daily needs.</p>
+        <p>In these times, we've eliminated the stress associated with shopping for daily essentials. You can now effortlessly order all your household products and groceries online. Plus, the added convenience of finding all your requirements at a single source, coupled with substantial savings, demonstrates that bigbasket, India's largest online supermarket, has transformed the way we shop for groceries. Online grocery shopping has become second nature. And when it comes to freshness, whether it's fruits and vegetables or dairy and meat, we've got you covered! Easily obtain fresh eggs, meat, fish, and more with just a few clicks.</p>
+        <p>We now serve 300+ cities and towns across India and ensure swift delivery times, guaranteeing that all your groceries, snacks and branded foods reach you on time.</p>
+        <p>Slotted Delivery: Choose the most convenient delivery slot to receive your groceries, ranging from early morning delivery for early birds to late-night delivery for those on the night shift. bigbasket caters to every schedule.</p>
+        <p>Instant delivery from bbnow: In response to the ever-increasing demand for convenience, bbnow by bigbasket offers lightning-fast grocery delivery, ensuring that your essentials are at your doorstep within 15-30 minutes. Our quick delivery service has revolutionized the way you shop for groceries. Choose from 5000+ grocery essentials. bbnow is available only in select cities.</p>
+        <p>Whether it's a last-minute dinner party or you simply need something urgently, we've got you covered. This service exemplifies our commitment to providing you with not just the widest range of products but also the fastest and most efficient shopping experience, making bigbasket.com the go-to destination for all your immediate grocery needs.</p>
+    </div>
+
+    <footer>
+        <div class="upper">
+            <ul>
+                <li><strong>Bigbasket</strong></li>
+                <li><a href="About us">About Us</a></li>
+                <li><a href="Become a ">Become A bigbasket Rider</a></li>
+                <li><a href="">In News</a></li>
+                <li><a href="">Green bigbasket</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Affiliate</a></li>
+                <li><a href="">Terms and Conditions</a></li>
+                <li><a href="">Careers At bigbasket</a></li>
+                <li><a href="">bb Instant</a></li>
+                <li><a href="">bb Daily</a></li>
+                <li><a href="">bb Blog</a></li>
+                <li><a href="">bbnow</a></li>
+            </ul>
+            <ul>
+                <li><strong>Help</strong></li>
+                <li><a href="">FAQs</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">bb Wallet FAQs</a></li>
+                <li><a href="">bb Walled T&Cs</a></li>
+                <li><a href="">Vendor Connect</a></li>
+            </ul>
+            <div>
+                <div>Become a Seller</div>
+            </div>
+        </div>
+        <div class="lower">
+            <hr>
+            <h2>Cities We Serve</h2>
+            <p>Srirangapatna | Arsikere | Ukhra | Jamtara | Kozhikode | Pratapgarh District | Gobichettipalayam | Muzaffarnagar District | Nainital | Ludhiana District | Hooghly District | Gonda District | Fatehgarh Sahib District | Baghpat District | Amroha District | Mahabubnagar | Korba | Varanasi | Kanakapura | Khurai | Raisen | Gondia | Rahatgarh | Bhiwadi | Goa | Bahadurgarh | Raichur | Sindudurg | Sangareddy | Kurnool | Jadcherla | Paschim Bardhaman | Muzaffarpur | Rupnagar | JAGANNATHPRASAD | Faridkot | DINARA | Narsinghpur | Visakhapatnam District | KHUNTI | Kiphire | Kishanganj | Hubli | Prakasam | Nalgonda | Karnal | Panipat | Rohtak | Renigunta | Patiala | Trichy | Bulandshahr | Nagarkurnool | Gadwal | Jahangirabad | Anupshahar | Gudur | Khatauli | Baleswar | Bhagpat | BAGNAN | BADAMBA | BADAGADA | BABUJANG | Berachampa | Andaman and Nicobar | Dhanbad | ASIKA | Haripal | Meerut District | Udgir | ARWAL | Alleppey | BEHRAMPUR | BENIPATTI | Lohardaga | Banka | Bankura | BALLIGUDA | BAMRA | BASIRHAT | Bastar | Bardhaman | Bargarh | NAZIRPUR | NIMAPARA | BARPETA | Nagaon | DOOMDOOMA | TINSUKIA | Vyara | Nuapada | NULL | DIGBOI | North Tripura | North Dinajpur | NORTH LAKHIMPUR | North 24 Parganas | North Cachar Hills | Dholka | Kheda | Butibori | Udaipura | Gadarwara | Jaora | Nagda | Ratlam | Nadiad | Palanpur | Vaishali | ASTARANGA | Ladakh | Sonipat | Sambalpur | Darrang | Darjiling | Wanaparthy | Dantewada | Balasore | Kendrapara | RAJGIR | RANGPO | Raigarh | RAIRAKHOL | Puruliya | RAGHUNATHPUR-BR | PLASSEY | Konaseema District | Deoghar | DASPALLA | Unjha | Botad | Barabanki District | Jalandhar | Indore | Mhow | Pithampur | Ludhiana | East Garo Hills | Hapur | Chandigarh Tricity | East-Godavari-2 | Chittoor District | Tiruvallur District | Bidar District | Sangareddy District | Ayodhya District | Pench | Saoner | Memari | Bolpur | Mandideep | Bangaon | Habra | Tamluk | Basirhat | Barakar | Chittaranjan | Gohana | Amritsar | West Kameng | West Khasi Hills | Begusarai | West Sikkim | West Tripura | WAZIRGANJ | Kittur | Motebeennura | Haveri | Kalghatgi | Hangal | Harihara | Gadag | Haliyal | KHALARI-JR | Khagaria | Kendujhar | Godhra | Kawardha | Karimganj | Mundgod | Hathras | Khergam | Masrakh | Bakhtiarpur | Hassan | Arambag | Baripada | Soro | Shadnagar | Bhongir | Kazipet | CHHENDIPADA | CHHAPRA | Chatra | Changlang | Howrah | Hooghly | HINJILICUT | CHIKITI | IMAMGANJ | ILIPUR | Vaidpura | South Tripura | SULTANGANJ | South Garo Hills | South Sikkim | SURAJGARHA | Surguja | Sundergarh | Supaul | SWARUPNAGAR | Thoubal | Tirwanganj | Dimapur | Pandua | Koppal | Jamuria | Khairabad | Siliguri | Saran | Amalapuram | Addanki | Yavatmal | Thrissur | Panchkula | Naharlagun | JAGDISHPUR | Shiggaon | Savadatti | Sullurupeta | Makrana | Kuchaman City | Shambhu | Warora | Khambhat | Arakkonam | RUNNISAIDPUR | RUNNISAIDPUR | Rohtas | Nellore | Ambala | Aligarh | Ramgarh | Sircilla District | South 24 Parganas District | Sultanpur District | Pipariya | Raebareli District | Raipur | Saiha | Saharsa | Malur | Hardoi | Darbhanga | Gaya | Motihari | Angul | Chhindwara | Ganjam | Bassi | Hindaun | Lalsot | Karauli | Dausa | Himachal Pradesh | Gangapur City | Seoni | KAMAKHYANAGAR | Palani | Bagula | Taherpur | Bulandshahr District | Sathupally | Wyra | Amaravathi | Gwalior | Rajkot | Allahabad | Bareilly | Aizawl | Palakkad | Palwal | Kalinga Nagar | KHIZASARAI | Akola | Katol | Chinhat | Vellakovil | Lunawada | Mansa | Haridwar | Bihta | ARRAH | Narketpalle | Buxar | Multai | Lohit | Naini | Munger | Pehowa | Lunglei | Lower Subansiri | Lower Dibang Valley | Longleng | Pilakhua District | Karbi Anglong | Thanesar | Kanker | Vadodara | Tuensang | Visnagar | Itarsi | Khordha | Dewas | Bagru | Kurukshetra | Madanapalle | Modinagar District | Yamuna Nagar | Kaithal | Ranihati | Mangalore | Chandrapur | Madanpur | JHANJHARPUR | Jehanabad | KADOBAHAL | Jharsuguda | Kalahandi | Kaimur (Bhabua) | Manali | KALYANI | Kandhamal | Kamrup | Hanskhali | Guskhara | Thakurnagar | Kangeyam | Erode | Sri City | Shahabad Markanda | Balangir | Srinagar | Shimla | Chaklasi | Vijayawada-Guntur | Lakhisarai | Aurangabad(BH) | Jammu Kashmir | AUL | Dhone | Malerkotla | DINHATA | Krishnagiri | Mandya | Jehanabad | JALPAIGURI | RAJGANJ | Parwanoo | Jajpur | Krishna District | Ashta | ALIPURDUAR | JAIGAON | Kota | Upper Subansiri | Surat | Sheikhpura | NAKASHIPARA | Nadia | Nalbari | Nalanda | NARAYANPUR | NARASINGHPUR | Nayagarh | Nawada | SALIPUR | Purba Bardhaman | Nabarangapur | Muzaffarpur | SARAIYA | Vaniyambadi | Saran | Salcete | Gurugram Rural | Tirap | Indore Rural | Guwahati Rural | Bhopal Rural | Coimbatore Rural | Bhubaneswar Rural | Karimnagar | Kolkata Rural | Kochi Rural | Bavla | Sonepur | Mokama | Nawada | Moga | Nakodar | Nawanshahr | Nabha | Anand | Mulbagal | Kamptee | Kapadvanj | Mathura | Aurangabad | Kapurthala | Haryana | Rampur | BIRPARA | Sagar | COOCHBEHAR | Kheri | MALDA | SHILLONG | AGARTALA | Dhamnod | Medinipur | Modasa | Gopalganj | KONARK | Koraput | Shilong | Tawang | KODALA | Koderma | Amreli | Kolasib | Khorda | Howrah | Badnagar | Deesa | Upper Siang | Warangal | Hanamkonda | ULUBERIA | Kannauj | Farrukhabad | Bidhuna | Chhibramau | Khandwa | Khargone | Lakhimpur | Bangarmau | Ramanagara | West Siang | Guntur-Rural | BONGAON | Boudh | BRAHMAPUR | BRAJRAJNAGAR | Cachar | Champhai | CHANDANKIYARI | CHANDBALI | CHANDIKHOL | kolar | Shamli | Vellore | Thiruvananthapuram | Songadh | Ujjain | Sikar | Nadia | Bardoli | Bokaro | BACHHRAWAN | Chittor District | Machilipatnam | North 24 Parganas | Godda | Sasaram | Hasanpur | West-Godavari | Wani | Ghughus | Shrimadhopur | Chameli | Amritsar | Mancherial | Jagtial | Chotila | Gopalganj | GOPALAPUR | Goalpara | Giridh | Hailakandi | Gumla | GUMIA | GOPALNAGAR | HANSKHALI | HAJIPUR | Tezpur | Coimbatore | GOGAMUKH | Seraikela-kharsawan | Serchhip | Mysore | SHEOHAR | Pune | Hyderabad | Kolkata | Chennai | Mumbai | Nashik | SHEONAR | Sibsagar | Warud | Chandur Bazar | Dhar | Bina | Kalluru | Kalmeshwar | Morshi | Puttur | Vapi | Bhandara | Ganj Basoda | Bhavnagar | Dhenkanal | Srikalahasti | Nagari | North Sikkim | Kanpur | DIBRUGARH | Shaheed Bhagat Singh Nagar | Pakur | Tirupattur | Kokrajhar | Wardha | Bhopal | Jaipur | Ahmedabad-Gandhinagar | Noida-Ghaziabad | Meerut | Vizianagaram | Medak District | East Godavari District | Nizamabad District | Kamareddy District | Lucknow Rural | Noida Rural | Chennai Rural | Vizag Rural | Hyderabad Rural | Bangalore Rural | Ranebennur | Puducherry | Bagepalli | Chintamani | Ambur | Channapatna | Maddur | Nabadwip | Katwa | Kharagpur | Mammit | Kothagudem | Malkangiri | MALMALIYA | MAIRWA | MAKHDUMPUR | MAHARAJGANJ-BH | Mahasamund | Tumakuru | Suryapet District | Udham-Singh-Nagar | Vikarabad | Haldia | Bhadradri Kothagudem District | Dahegam | Cuttack | Jangaon | Dindigul | Sihor | Dudu | Beawar | Udumalaipettai | Pollachi | Vijapur | Dharapuram | Canning | Tiptur | Mehmedabad | Fatehpur | Krishnarajpet | Fatehgarh | Janjgir-champa | Jashpur | Karur | Jamui | Jaintia Hills | Daryapur Banosa | Jagatsinghapur | JAGDISHPUR | Imphal West | Punjab | Davangere | Visakhapatnam | Tuni | Tiruppur | Bilimora | Madanapalli | Tirupati | Miryalaguda | Kalwakurthy | Hajipur | Kadapa | Hasnabad | Bhadrak | East Kameng | PAKRIBARWAN | East Midnapore | East Khasi Hills | East Sikkim | East Siang | EKMA | East Singhbhum | Ganjam | GALLERI | West Midnapore | Kochi | West Singhbhum | Dharwad | Zunhebotto | Palamau | Barh | West Champaran | KUCHAIKOTE | Koriya | Bhangar | Nagpur Rural | Patna Rural | Mumbai Rural | Mysore Rural | Vadodara Rural | Jaipur Rural | Pune Rural | Surat Rural | Aligarh District | Amethi District | Kishangarh | Nasirabad | Ramnagar | Katihar | Ramtek | Moradabad | Shahjahanpur | Ajmer | Kottayam | Rajamahendravaram | Kakinada | Kundli | Sahibganj | Gudiyatham | DehraDun | Ri Bhoi | Rayagada | Agra | Madhepura | Madhubani | Lawngtlai | Madurai | Halflong | Amravati | Jamshedpur | Kolhapur | Kalaburagi | Guwahati | Bhubaneshwar-Cuttack | Araria | Faridabad | Khammam | Saharanpur District | Tarakeswar | Sambhal District | MARHOWARAH | Siddipet District | Dhandhuka | Umreth | Bareja | Pardi | Nayagarh | Ladwa | Garkha | Venkatgiri | Naidupeta | Malmaliya | Lakhimpur | KUCHINDA | Angul | Latehar | Sanawad | Sitamarhi | Kekri | Gulbaraga | Sambalpur | Jharsuguda | Mandsaur | Dumraon | Rourkela | Tripura | Samastipur | Phagwara | Jabalpur | Jagraon | Thiruttani | Vidisha | Bishnupur | BHUBAN | BHORE | Birbhum | Bilaspur(CGH) | BHANJANAGAR | BENIPUR | Bhojpur | BHARWARA | BOKAKHAT | GOLAGHAT | BONGAIGAON | SILCHAR | JORHAT | BHAGALPUR | NAZIRA | SIVASAGAR | Rajnandgaon | MANGALDOI | BAIHATA | SONBARSA | Navsari | Hoshangabad | Patan | Siddhpur | Jajapur | Robertsonpet | Kalol | Kadi | Himatnagar | Mehsana | Bhadrak District | Pakyong | Puri | Garhwa | Gariaband | GARJANPUR | Gaya | Gajapati | PIPILI | DHOLI | Debagarh | PIRO | KHODAGANJ | Kanthi | HELENCHA | Hazaribag | HINGALGANJ | HILSA | Papum Pare | PETERBAR | PAVAPURI | PHUSRO | Phek | Balaghat | Pandhurna | Sausar | Asansol | Bihar Sharif | Ankleshwar | Palitana | PEDDAPALLI | Bharuch | Madhubani | Bettiah | Lucknow | Nagpur | DULIAJAN | Hosur | Eluru | Ghaziabad | Muzzafarpur | Delhi | Gurgaon | Bangalore | Chikkaballapura District | Srikakulam Disctrict | Vizianagaram Disctrict | Yanam District | Patna | Puri | Gautam Buddha Nagar District | Anantapur District | Vijayapura | Sidlaghatta | Hindupur | Kalna | Gauribidanur | Doddaballapura | Jewar | Muradnagar | Tribeni | Santipur | KENDRAPARA | West Garo Hills | Borsad | Petlad | Valsad | Daman | Silvassa | Bhojpur | Siwan | Ranchi | Jhunjhunu | West Godavari District | Churu | Bangarpet | Byadgi | Dharampur | Rajpipla | Channarayapattana | Ghanpur | Athagad | Krishnarajanagara | Sidhauli | Malpura | Palamaner | Gursahaiganj | Bailhongal | ALNAVAR | Belgaum | Bankapura | MINAKHAN | Mayurbhanj | MOHAMMADPUR | MIRGANJ | Mokokchung | MOHANA | Murshidabad | Munger | Prakasam District | Sitapur | MASAURHI | Marigaon | Sonapur | Siwan | Sonitpur | Jagatsinghpur | SINGHIA | Simdega | Sitamarhi | SIRDALA | South Dinajpur | South 24 Parganas | Durg | East Champaran | DIGAPAHANDI | Dumka | Dhemaji | Dhubri | Dhalai | Dhamtari | DHAKA | DHAKUAKHANA | Jodhpur | Tirora | Punganur</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<script src="index.js"></script>

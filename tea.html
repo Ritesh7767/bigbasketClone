@@ -1,0 +1,566 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigbasket Grocery Shopping Online</title>
+    <link rel="stylesheet" href="tea.css">
+</head>
+<body>
+
+    <div class="parentCategory">
+
+        <div class="parentCategorydiv1">
+        </div>
+
+        <div class="parentCategorydiv2">
+        </div>
+
+        <div class="parentCategorydiv3">
+        </div>
+     </div>
+
+     <!-- Category html ends here -->
+    
+     <!-- Location Html starts here -->
+
+     <div class="Parentlocation">
+        <div class="Parentlocation_child1">
+            <h2>Select a location for delivery</h2>
+            <p>Choose your address location to see product availability
+                and delivery options
+            </p>
+        </div>
+        <div class="Parentlocation_child2">
+            <div>
+                <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png" alt="search logo">
+                <input type="text" id="locationInput" placeholder="Search for area or street name">
+            </div>
+        </div>
+    </div>
+
+    <!-- Location html ends here -->
+
+    <!-- Parent Navbar html starts here -->
+
+    <div class="ParentNav">
+        <div class="ParentNav_child1">
+            <a href=""><img src="https://gumlet.assettype.com/afaqs/2021-11/c9b6e415-726d-4f0b-a787-c3eff949e722/bb_Daily_with_TATA_Logo.jpg?auto=format%2Ccompress" alt="bigbasket logo"></a>
+            <input type="text" placeholder="Search for Products...">
+            <div id="ParentNav_child1_div1">
+                <img src="https://www.shareicon.net/data/256x256/2015/12/17/689050_map_512x512.png" alt="location logo">
+                <div>Select Location </div>
+            </div>
+            <div id="ParentNav_child1_div2">login/Sign Up</div>
+            <div id="Cart"><img src="https://basketballacademy.hawks.com/wp-content/uploads/2020/02/Group-5.svg" alt="Add to card logo"></div>
+        </div>
+        <div class="ParentNav_child2">
+            <button id="ShopByCategoryBtn">
+                <p>Shop by <Strong>Category</Strong></p>
+                <div><img src="https://arkitekturivirkeligheden.dk/wp-content/uploads/2018/02/white-down-arrow-png-2-e1517692151339.png"></div> 
+            </button>
+            <ul>
+                <li><a href="">Exotic Fruits and V...</a></li>
+                <li><a href="">Tea</a></li>
+                <li><a href="">Ghee</a></li>
+                <li><a href="">Nandini</a></li>
+                <li><a href="">>></a></li>
+            </ul>
+            <div><img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt="offer Image"></div>
+        </div>
+    </div>
+
+    <!-- ParentNavbar html ends here -->
+
+    
+    <div class="toggle-filter-btn" id="toggleFilterBtn">Toggle Filter</div>
+
+    <div class="container">
+        <div class="filter-container">
+            <div class="filter-heading">Filter Options</div>
+            <div class="filter-options">
+                <label for="ratingFilter">Rating:</label>
+                <select id="ratingFilter">
+                    <option value="0">All Ratings</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+            <div class="filter-options">
+                <label for="varietyFilter">Variety:</label>
+                <select id="varietyFilter">
+                    <option value="0">All Varieties</option>
+                    <option value="1">Variety 1</option>
+                    <option value="2">Variety 2</option>
+                    <option value="3">Variety 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="list">
+            <h2>Tea Beverages</h2>
+            <div id="tea-container" class="top-item"></div>
+        </div>
+    </div>
+
+    <script>
+        const imageUrls = [
+        "https://www.bigbasket.com/media/uploads/p/m/40228625_2-indisecrets-organic-tulsi-honey-chamomile.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/1204482_1-red-label-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40228627_2-indisecrets-organic-tulsi-ginger-turmeric.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/1204490_1-red-label-tea-natural-care.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/1204491_1-taj-mahal-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40200082_3-tata-tea-gold-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40276397_2-indisecrets-assorted-tulsi-infusions-with-4-exotic-flavours-sampler-pack.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/20003982_4-wagh-bakri-premium-leaf-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/264437_2-tata-tea-kanan-devan-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40128177_8-emperia-masters-blend-tea-rich-taste.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/266572_4-3-roses-dust-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40199390_2-tata-tea-premium-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40201467_2-tata-tea-gold-care-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/1201451_1-lipton-green-tea-honey-lemon.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40215109_4-emperia-kadak-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/262810_24-lipton-darjeeling-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/1206485_1-tetley-green-tea-ginger-mint-lemon.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/20004601_3-tetley-green-tea-lemon-honey.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/263613_4-tata-tea-agni-leaf-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/240040_6-tetley-black-tea-original.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40002111_11-3-roses-top-star.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/20005450_4-organic-india-organic-tulsi-green-tea-lemon-ginger-stress-relieving.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40222687_3-tata-tea-gold-care-tea-blend-with-rich-taste-natural-ingredients-improves-immunity-memory.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40288927_3-emperia-emperia-kadak-care-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40120802_1-girnar-royal-cup-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40251348_2-tata-tea-agni-black-tea-10-extra-strong-leaves-strong-taste-energising.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40228624_2-indisecrets-organic-tea-infusion-pure-tulsi.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40067633_6-goodricke-organic-tea-roasted-darjeeling.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40160308_4-3-roses-natural-care-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/20003981_7-wagh-bakri-spiced-tea-blend-of-7-refreshing-spices.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/297576_15-tata-tea-chakra-gold-dust-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/264567_11-tata-tea-agni-dust-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/262811_17-lipton-yellow-label-tea-finest-blend.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/252948_2-tata-tea-kanan-devan-tea-classic.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/1201452_1-lipton-green-tea-pure-light.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/266595_11-taj-mahal-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40026308_3-tata-tea-kanan-devan-tea-golden-leaf.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/297467_9-tetley-masala-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40275632_2-dabur-vedic-tea-premium-quality-with-30-ayurvedic-herbs-re-energises-boosts-immunity.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/20005449_2-organic-india-chamomile-tea-tulsi-honey.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/100440682_7-taj-mahal-rich-masala-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40052464_3-wagh-bakri-leaf-tea-navchetan.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/297511_7-tetley-elaichi-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40052454_2-wagh-bakri-dust-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40012637_10-lipton-green-tea-pure-light.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40120792_1-girnar-instant-tea-premix-with-ginger.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/263386_10-organic-india-infusion-bags-tulsi-green-tea.jpg?tr=w-1920,q=80",
+        "https://www.bigbasket.com/media/uploads/p/m/40287566_2-tata-tea-premium-mumbai-cutting-chai-flavoured-tea-100-natural-traditional-authentic.jpg?tr=w-1920,q=80",
+            
+            
+        ];
+
+        let arr = [
+    {
+        "Fruits & Vegetables" : 
+            {
+                "Cuts & Sprouts" : ["Cut & Peeled Veggies", "Cut Fruit, Tender Coconut", "Fresh Juices & Milkshakes", "Fresh Salads & Sprouts", "Recipe Packs"],
+                "Exotic Fruits & Veggies" : ["Exotic Fruits", "Exotic Vegetables"],
+                "Flower Bouquets, Bunches" : ["Marigold", "Other Flowers", "Roses"],
+                "Fresh Fruits": ["Apples & Pomegranate", "Banana, Sapota & Papaya", "Fruit Baskets", "Kiwi, Melon, Citrus fruit", "Mangoes", "Seasonal Fruits"],
+                "Fresh Vegetables" : ["Beans, Brinjals & Okra","Cabbage & Cauliflower", "Cucumber & Capsicum", "Gourd, Pumpkin, Drumstick", "Leafy Vegetables", "Potato, Onion & Tomato", "Root Vegetables", "Specialty"],
+                "Herbs & Seasonings" : ["Indian & Exotic Herbs", "Lemon , Ginger & Garlic"],
+                "Organic Fruits & Vegetables" : ["Organic Fruits", "Organic Vegetables"]
+                
+            }
+    },
+    {
+        "Foodgrains, Oil & Masala" : 
+            {
+                "Atta, Flours & Sooji" : ["Atta Whole Wheat", "Rice & Other Flours", "Sooji, Maida & Besan"],
+                "Dals & Pulses" : ["Cereals & Millets", "Toor , Channa & Moong Dal"],
+                "Dry Fruits" : ["Almonds", "Cashews", "Mukhwas", "Other Dry Fruits", "Raisins"],
+                "Edible Oils & Ghee" : ["Blended Cooking Oils", "Cold Pressed Oil", "Cooking Coconut Oil", "Cotton Seed Oil", "Ghee & Vanaspati", "Gingelly Oil", "Groundnut Oil", "Olive & Canola Oils", "Other Edible Oils", "Soya & Mustard Oils", "Sunflower, Rice Bran Oil"],
+                "Masalas & Spices" : ["Blended Masalas", "Cooking Pastes", "Herbs & Seasoning", "Powdered Spices", "Whole Spices"],
+                "Organic Staples" : ["Organic Dals & Pulses", "Organic Dry Fruits", "Organic Edible Oil, Ghee", "Organic Flours", "Organic Masalas & Spices", "Organic Millet & Flours", "Organic Rice, Other Rice", "Organic Sugar, Jaggery"],
+                "Rice & Rice Products" : ["Basmati Rice", "Boiled & Steam Rice", "Poha, Sabudana & Murmura", "Raw Rice"],
+                "Salt, Sugar & Jaggery" : ["Salts", "Sugar & Jaggery", "Sugarfree Sweeteners"]
+            } 
+    },
+    {
+        "Bakery, Cakes & Dairy" : 
+            {
+                "Bakery Snacks" : ["Bread Sticks & Lavash", "BreadCrumbs & Croutons", "Cheese & Garlic Bread", "Puffs, Patties, Sandwiches"],
+                "Breads & Buns" : ["Brown, Wheat & Multigram", "Buns, Pavs & Pizza Base", "Milk, White & Sandwich"],
+                "Cakes & Pastries" : ["Birthday & Party Cakes", "Doughnuts & Mousses", "Muffins & Cup Cakes", "Pastries & Brownies", "Tea Cakes & Slice Cakes"],
+                "Cookies, Rusk & Khari" : ["Bakery Biscuits, Cookies", "Healthy Organic Cookies", "Khari & Cream Rolls","Premium Cookies", "Rusks"],
+                "Dairy" : ["Butter & Margarine", "ButterMilk and Lassi", "Cheese" , "Condensed PowderMilk", "Curd", "Flovoured, Soya Milk", "Fresh Milk", "Milk", "Paneer, Tofu & Cream", "Yogurt & Shrikhand"],
+                "Gourmet Breads": ["Bagels & Baguette", "Croissants, Bagels", "Gourmet Bread", "Panini , Focaccia & Pita"],
+                "Ice Creams & Desserts" : ["Ice Creams"],
+                "Non Dairy" : ["Dairy Free (Vegan)"]
+            }
+    },
+    {
+        "Beverages" : 
+            {
+                "Coffee" : ["Ground Coffee", "Instant Coffee"], 
+                "Energy & Soft Drinks" : ["Cold Drinks", "Icetea, Non Aerated Drink", "Non Alcoholic Drink", "Soda & Cocktail Mix", "Sports & Energy Drinks"],
+                "Fruit Juices & Drinks" : ["Juices", "Syrups & concentrates", "Unsweetened Cold Press"],
+                "Health Drink, Supplement" : ["Childrens (2-5 Yrs)","Diabetic drinks", "Glucose Powder, Tablets", "Kids(5+Yrs)", "Mens & Women"],
+                "Tea" : ["Exotic & Flavoured Tea","Green Tea", "Leaf & Dust Tea","Tea Bags"],
+                "Water" : ["Flavoured Wated", "Packed Wated", "Spring Wated"]
+            }
+    },
+    {
+        "Snacks & Branded Foods" : 
+            {
+                "Biscuits & Cookies" : ["Cookies", "Cream Biscuits & Wafers", "Glucose & Milk biscuits", "Marie , Health, Digestive", "Salted Biscuits"],
+                "Breakfast Cereals" : ["Flakes", "Granola & Cereal Bars", "Kids Cereal", "Muesli", "Oats & Porridge"], 
+                "Chocolates & Candies" : ["Chocolates", "Gift Boxes", "Mints & Chewing Gums", "Toffy , Candy & Lollypop"],
+                "Frozen Veggies & Snacks" : ["Frozen Indian Breads", "Frozen Non-Veg Snacks", "Frozen Veg-Snacks", "Frozen Vegetables"],
+                "Indian Mithai" : ["Chikki & Gajjak", "Fresh Sweets", "Tinned, Packed Sweets"],
+                "Noodle, Pasta, Vermicelli" : ["Cup Noodles", "Hakka Noodles", "Instant Noodles", "Pasta & Macaroni", "Vermicelli"],
+                "Pickles & Chutney" : ["Chutney Powder", "Lime & Mango Pickle", "Non-Veg Pickle", "Other Veg-Pickle"],
+                "Ready To Cook & Eat" : ["Breakfast & Sancks Mix", "Canned Food", "Dessert Mixes", "Heat & Eat Ready Meals", "Home Baking", "Papad ,Ready to Fry", "Soups"],
+                "Snacks & Namkeen" : ["Chips & Corn Snacks", "Namkeen & Savoury Snacks"],
+                "Spreads, Sauces, Ketchup" : ["Chilli & Soya Sauce", "Coco & Nut Spread", "Dips & Dressing", "Honey", "Jam, Conserve & Marmalade", "Mayonnaise", "Tomato Ketchup & Sauces", "Vinegar"]
+            }
+    },
+    {
+        "Beauty & Hygiene" : 
+            {
+                "Bath & Hand Wash" : ["Bath Salts & Oils", "Bathing Accessories", "Bathing Bars & Soaps", "Body Scrubs & Exfoliants", "Hand Wash & Sanitizers", "Shower Gel & Body Wash", "Talcum Powder"],
+                "Feminine Hygiene" : ["Hair Removal", "Intimate Wash & Care", "Panty Liners", "Sanitary Napkins", "Tampons & Menstrual Cups"],
+                "Fragrances & Deos" : ["Attar", "Body Sprays and Mists", "Eau De Cologne", "Eau De Parfum", "Eau De Toilette", "Gift Sets", "Men's Deodrants", "Perfume", "Women's Deodrants"],
+                "Hair Care" : ["Dry Shampoo & Conditioner", "Hair & Scalp Treatment", "Hair Color", "Hair Styling", "Shampoo & Conditioner", "Tools & Accessories"],
+                "Health & Medicine" : ["Adult Diapers", "Antiseptic & Bandages", "Ayurveda", "Cotton & Ear Buds", "Everyday Medicine", "Face Masks & Safety Gears", "Sexual Wellness", "Slimming Products", "Supplements & Proteins"],
+                "Makeup" : ["Eyes", "Face", "lips", "Makeup Accessories", "Makeup Kits & Gift Sets", "Nails"],
+                "Men's Grooming" : ["Bath & Shower", "Combos & Gift Sets", "Deodrant", "Face & Body", "Hair care & Styling", "Moustache & Beard Card", "Shaving Care", "Talc"],
+                "Oral Care" : ["Electric Toothbrush", "Floss & Tongue Cleaner", "MouthWash", "Toothbrush", "Toothpaste"],
+                "Skin care" : ["Aromatherapy", "Body Care", "Eye Care", "Face Care", "Lip Care"]
+            }
+    },
+    {
+        "Cleaning & Household" : 
+            {
+                "All Purpose Cleaners": ["Disinfectant Spray and Cleaner", "Floor & Other Cleaners", "Imported Cleaners", "Kitchen, Glass & Drains", "Metal, Furniture Cleaner", "Toilet Cleaners"],
+                "Bins & Bathroom Ware" : ["Bath Stools, Basin & Sets", "Buckets & Mugs", "Dustbins", "Hangers Clips & Rope", "Laundry, Storage Baskets", "Other Plastic Ware", "Soap Cases & Dispensers"],
+                "Car & Shoe Care" : ["Car Freshner", "Car Polish & Cleaner", "Shoe Polish", "Shoe Shiners & Brushes"],
+                "Detergents & Dishwash" : ["Descaler", "Detergent Bars", "Detergent Powder & Liquid", "Diswash Bars & Powder", "Diswash Liquids & Pastes", "Fabric Pre, Post Wash", "Imported Home Care"],
+                "Disposables, Garbage Bag" : ["Aluminium Foil, Clingwrap", "Garbage Bags", "Kitchen Rolls", "Paper napkins , Tissue Box", "Toilet Paper", "Wet Wipe, Pocket Tissues"],
+                "Fresheners & Repellents" : ["Air Freshner", "Insect Repellent", "Mosquito Repellent"],
+                "Mops, Brushes & Scrubs" : ["Brooms & Dust Pans", "Dust Cloth & Wipes", "Mops & Wipers", "Toilet & Other Brushes", "Utensil Scrub-Pad, Glove"],
+                "Party & Festive Needs" : ["Caps, Balloons & Candles", "Decorations", "Disposable Cups & Plates", "Gift wraps & Bags", "Gifts", "Seasonal Accessories"],
+                "Pooja Needs" : ["Agarbatti, Incense Sticks", "Camphor & Wicks", "Candles & Match Box", "Lamp & Lamp Oil", "Other Pooja Needs", "Pooja Thali & Bells"],
+                "Stationery" : ["Books & Magazines", "Colours & Crayons", "Electric Accessories", "Erasers & Sharpners", "Exam Pad & Pencil Box", "Games & Calculator", "Notebooks Files & Folders", "Pen, Pencils", "Scissor, Glue & Tape"]
+            }
+    },
+    {
+        "Kitchen , Garden & Pets" : 
+            {
+                "Appliances & Electricals" : ["Air Fryers & Rice Cookers", "Battery & Electrical", "Coffee Makers & Kettles", "Grills & Toasters", "Induction Cooktop", "Irons", "Juicer , Mixer & Grinder", "LED Bulbs & Batters"],
+                "Bakeware" : ["Bakeware Accessories", "Bakeware Moulds, Cutters", "Baking Tools & Brushes"],
+                "Cookware & Non Stick" : ["Cook & Serve", "Cookware Sets", "Gas Stove", "Kadai & Fry Pans", "Microwavable Cookware", "Pressure Cookers", "Tawa & Sauce Pan"],
+                "Crockery & Cutlery" : ["Cups ,Mugs & Tumblers", "Cutlery, Spoon & Fork", "Dinner Sets", "Glassware", "Plates & Bowls"],
+                "Flask & Casserole" : ["Casserole", "Vacuum Flask"],
+                "Gardening" : ["Fertilizer & Pesticides", "Gardening Tools", "Pots, Planters & Trays", "Seeds & Saplings"],
+                "Kitchen Accessories" : ["Choppers & Graters", "Kitchen Tools & Other Access...", "Knives & Peelers", "Lighters", "Strainer, Ladle & Spatula"],
+                "Pet Food & Accessories" : ["Health Supplements", "Pet cleaning & Grooming", "Pet Collars & Leashers", "Pet Meals & Treas", "Pet toys"],
+                "Steel Utensils" : ["Bowls & Vessels", "Copper Utensils", "Plates & Tumblers", "Steel Lunch Box", "Steel Storage Container"],
+                "Storage & Accessories" : ["Cloth Dryer & Iron Table", "Containers Sets", "Lunch Boxes", "Racks & Holders", "Umbrella", "Wall Hooks & Hangers", "Water & Fridge Bottles"]
+            }
+    },
+    {
+        "Eggs, Meat & Fish" : 
+            {
+                "Eggs" : ["Country Eggs", "Farm Eggs", "Other Eggs", "Protein Eggs"],
+                "Fish & Seafood" : ["Canned Seafood", "Dry Fish", "Fresh Water Fish", "Frozen Fish & Seafood", "Marine Water Fish", "Other Seafood", "Praws & Shrimps"],
+                "Marinades" : ["Marinated Meat"],
+                "Mutton & Lamb" : ["Fresh Mutton", "Frozen Mutton"],
+                "Pork & Other Meats" : ["Fresh & Frozen Pork"],
+                "Poultry" : ["Duck & Goose", "Fresh Chicken","Frozen Chicken", "Turkey"],
+                "Sausages, Bacon & Salami" : ["Chicken Sausages", "Lamb", "Pork & Ham","Turkey & Duck"]
+            }
+    },
+    {
+        "Gourmet & World Food" : 
+            {
+                "Cereals & Breakfast" : ["Cereal & Granola Bars","Gourmet Flakes","Imported Oats & Porridge","Muesli & Rice Cakes"],
+                "Chocolates & Biscuits" : ["Cookies, Biscottie, Wafer","Crackers & Digestive","International Chocolates","Luxury Chocolates, Gifts","Marshmallow, Candy, Jerry"],
+                "Cooking & Baking Needs" : ["Baking Accessories","Baking ,Cake Decorations","Cooking Chocolate,Cocoa","Curry Pasta, Coconut Milk","Exotic Sugar & Salt","Flour & Pre-Mixes","Herbs, Seasoning & Rubs","Quinoa & Grains"],
+                "Dairy & Cheese" : ["Butter & Cream","Cream & Cheese Spreads","Flavoured & Greek Yogurt","Gourmet Ice Cream","International Cheese","Milk & Soya Drinks","Tofu"],
+                "Drinks & Beverages" : ["Aerated,Still,Sparkling","Cocktail Mixes","Coffee & Pre-Mix","Gourmet Juices & Drinks","Gourmet Tea & Tea Bags","Health Drinks","Non-Alcoholic Beer,Wine"],
+                "Oils & Vinegar" : ["Balsamic & Cider Vinegar","Canola & Rapeaseed Oil","Extra Virgin Olive Oil", "Flavoured & Other Oils", "Organic & Cold Press Oil", "Pure, Pomace Olive Oil", "Regualar & White Vinegar", "Wine & Rice Vinegar"],
+                "Pasta, Soup & Noodles" : ["Imported Noodles", "Imported Soups", "Jasmine & Sushi Rice", "Pastas & Spaghetti"],
+                "Sauces, Spreads & Dips" : ["Chocolate, Peanut Spread", "Honey & Maple Syrup" ,"Hummus, Cheese, Salsa Dip", "Jams, Marmalade, Spreads", "Salad Dressings", "Thai & Asain Sauces"],
+                "Snacks, Dry Fruits, Nuts" : ["Dry Fruits & Berries", "Gourmet Popcorn", "Healthy, Baked Snacks", "Nachos & Chips", "Roasted Seeds & Nuts", "Trail & Cocktail Mixes"],
+                "Tinned & Processed Food" : ["Beans & Pulses", "Fish & Tuna", "Fruits & Pulps", "Meats & Sausages", "Olive, Jalapeno, Gherkin", "Tomatoes & Vegetables"]
+            }
+    },
+    {
+        "Baby Care" : 
+            {
+                "Baby Accessories" : ["Baby Gear & Outdoor", "Baby Toys", "Combs , Brushes, Clippers", "Kids Deo", "Other Baby Accessories", "Soothers & Teethers"],
+                "Baby Bath & Hygiene" : ["Baby Bath", "Baby Buds", "Baby Creams & Lotions", "Baby Gift Sets", "Baby Health", "Baby laundry", "Baby Oil & Shampoo", "Baby Oral Care", "Baby Powder"],
+                "Baby Food & Formula" : ["Baby Food", "Infant Formula", "Lactose Free Baby Food & Fo...", "Organic Baby Food"],
+                "Diapers & Wipes" : ["Baby Wipes", "Diapers", "Nappies & Rash Cream"],
+                "Feeding & Nursing" : ["Baby Dishes & Utensils", "Bibs & Napkins", "Nursing Tools", "Sippers & Bottles"],
+                "Mothers & Maternity" : ["Meternity Health Supplements", "Meternity Personal Care"]
+            }
+    },
+    {
+        "Paan Corner" : 
+            {
+                "Smoking Supplies" : ["Quit Smoking Alternatives", "Smoking Accessories"]
+            }
+    }
+]
+
+// Category code start from here
+
+function appendCategoryData(){
+
+    let parentCategorydiv1 = document.querySelector(".parentCategorydiv1")
+
+    arr.forEach(function(ele){
+        for(let key in ele){
+
+            let childDiv = document.createElement("div")
+            childDiv.append(key)
+            childDiv.setAttribute("id", "childDiv")
+            childDiv.addEventListener("mouseover", function(){
+
+                let parentCategorydiv2 = document.querySelector(".parentCategorydiv2")
+                parentCategorydiv2.innerHTML = ""
+
+                for(let innerKey in ele[key]){
+
+                    let childDiv2 = document.createElement("div")
+                    childDiv2.id = "childDiv2"
+                    childDiv2.append(innerKey)
+                    childDiv2.addEventListener("mouseover", function(){
+
+                        let parentCategorydiv3 = document.querySelector(".parentCategorydiv3")
+                        parentCategorydiv3.innerHTML = ""
+
+                        for(let innerList of ele[key][innerKey]){
+                            let childDiv3 = document.createElement("div")
+                            childDiv3.id = "childDiv3"
+                            childDiv3.append(innerList)
+                            parentCategorydiv3.append(childDiv3)
+                        }
+                    })
+                    parentCategorydiv2.append(childDiv2)
+                }
+                
+            })
+            parentCategorydiv1.append(childDiv)
+
+        }
+    })
+    
+}
+
+appendCategoryData()
+
+// Category Code Ends Here
+
+
+
+// Category Code stars form here
+
+CategoryBtn = document.querySelector(".ParentNav_child2 > button")
+CategoryBtn.addEventListener("click", function(){
+
+    let parentCategory = document.querySelector(".parentCategory")
+    // parentCategory.style.transition = "all 2s"
+
+    if(parentCategory.style.display === "none"){
+        parentCategory.style.display = "flex"
+
+        CategoryBtn.addEventListener("mouseover", function(){
+
+            parentCategory.style.width = "50%"
+            parentCategory.style.height = "500px"
+        })
+
+        CategoryBtn.addEventListener("mouseout", function(){
+            parentCategory.style.width = "50%"
+            parentCategory.style.height = "500px"
+        })
+    }
+    else{
+        parentCategory.style.display = "none"
+        parentCategory.style.width = "20%"
+        parentCategory.style.height = "200px"
+    
+    }
+})
+
+// Category Code Ends Here
+
+// Location Code starts form here
+
+let SelectLocationBtn = document.querySelector("#ParentNav_child1_div1")
+let Parentlocation = document.querySelector(".Parentlocation")
+
+SelectLocationBtn.addEventListener("click", function(){
+    
+
+    if(Parentlocation.style.display === "none"){
+        Parentlocation.style.display = "flex"
+        SelectLocationBtn.addEventListener("mouseover", function(){
+          Parentlocation.style.width = "300px"  
+          Parentlocation.style.height = "150px"
+        })
+        SelectLocationBtn.addEventListener("mouseout", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+    }
+    else{
+        Parentlocation.style.display = "none"
+        Parentlocation.style.width = "100px"
+        Parentlocation.style.height = "100px"
+    }
+
+})
+
+let Cart = document.querySelector("#Cart")
+
+Cart.addEventListener("click", function(){
+
+    if(Parentlocation.style.display === "none"){
+        Parentlocation.style.display = "flex"
+        Cart.addEventListener("mouseover", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+        Cart.addEventListener("mouseout", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+    }
+    else{
+        Parentlocation.style.display = "none"
+        Parentlocation.style.width = "100px"
+        Parentlocation.style.height = "100px"
+    }
+})
+
+
+let ExoticFruitsVeggies = document.querySelectorAll(".ParentNav_child2 > ul > li > a")
+console.log(ExoticFruitsVeggies)
+
+let pages = ["exoticFruitsVegetables.html", "tea.html", "Ghee page.html", "Nandini.html"]
+
+for(let x = 0; x < pages.length; x++){
+    ExoticFruitsVeggies[x].href = pages[x]
+    // console.log(ExoticFruitsVeggies[x])
+}
+
+let homePage = document.querySelector(".ParentNav_child1 > a")
+homePage.href = "HomePage.html"
+
+
+
+// Category Code Ends Here
+
+
+        const teaProducts = imageUrls.map((imageUrl, index) => ({
+            image: imageUrl,
+            price: (index % 15 + 5) * 15,
+            discountPercentage: index % 5 + 5,
+            rating: (Math.random() * 5).toFixed(1),
+            brand: `Brand ${index % 3 + 1}`,
+            variety: `Variety ${(index % 3) + 1}`
+        }));
+
+        function createTeaCard(product) {
+            const teaCard = document.createElement('div');
+            teaCard.classList.add('card2');
+
+            const teaImage = document.createElement('img');
+            teaImage.src = product.image;
+            teaImage.alt = product.name;
+
+            const teaTitle = document.createElement('h3');
+            teaTitle.textContent = product.name;
+
+            const teaDescription = document.createElement('p');
+            teaDescription.textContent = product.description;
+
+            const teaPrice = document.createElement('p');
+            teaPrice.textContent = `Price: ₹${product.price}`;
+
+            const teaDiscount = document.createElement('p');
+            teaDiscount.textContent = `Discount: ${product.discountPercentage}% off`;
+
+            const ratingBox = document.createElement('div');
+            ratingBox.classList.add('rating-box');
+            ratingBox.textContent = `Rating: ${product.rating}`;
+            for (let i = 0; i < 5; i++) {
+                const star = document.createElement('span');
+                star.classList.add('star');
+                if (i < Math.floor(product.rating)) {
+                    star.textContent = '★';
+                } else {
+                    star.textContent = '☆';
+                }
+                ratingBox.appendChild(star);
+            }
+
+            const brandBox = document.createElement('div');
+            brandBox.classList.add('brand-box');
+            brandBox.textContent = `Brand: ${product.brand}`;
+
+            const varietyBox = document.createElement('div');
+            varietyBox.classList.add('brand-box');
+            varietyBox.textContent = `Variety: ${product.variety}`;
+
+            const buttonContainer = document.createElement('div');
+            buttonContainer.classList.add('button-container');
+
+            const addToCartBtn = document.createElement('button');
+            addToCartBtn.classList.add('cart-btn');
+            addToCartBtn.textContent = 'Add to Cart';
+
+            const discountBtn = document.createElement('button');
+            discountBtn.classList.add('discount-btn');
+            discountBtn.textContent = 'Apply Discount';
+
+            discountBtn.addEventListener('click', () => {
+                console.log(`Applied discount for ${product.name}!`);
+            });
+
+            buttonContainer.appendChild(addToCartBtn);
+            buttonContainer.appendChild(discountBtn);
+
+            teaCard.appendChild(teaImage);
+            teaCard.appendChild(teaTitle);
+            teaCard.appendChild(teaDescription);
+            teaCard.appendChild(teaPrice);
+            teaCard.appendChild(teaDiscount);
+            teaCard.appendChild(ratingBox);
+            teaCard.appendChild(brandBox);
+            teaCard.appendChild(varietyBox);
+            teaCard.appendChild(buttonContainer);
+
+            return teaCard;
+        }
+
+        const teaContainer = document.getElementById('tea-container');
+
+        teaProducts.forEach((product) => {
+            const teaCard = createTeaCard(product);
+            teaContainer.appendChild(teaCard);
+        });
+
+        const filterBtn = document.getElementById('toggleFilterBtn');
+        const filterContainer = document.querySelector('.filter-container');
+
+        filterBtn.addEventListener('click', () => {
+            filterContainer.style.left = filterContainer.style.left === '0%' ? '-20%' : '0%';
+        });
+    </script>
+    
+</body>
+</html>

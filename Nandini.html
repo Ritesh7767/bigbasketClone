@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigbasket</title>
+    <link rel="stylesheet" href="./bigbasket.css">
+</head>
+<body>
+    <div class="parentCategory">
+
+        <div class="parentCategorydiv1">
+        </div>
+
+        <div class="parentCategorydiv2">
+        </div>
+
+        <div class="parentCategorydiv3">
+        </div>
+     </div>
+
+     <!-- Category html ends here -->
+    
+     <!-- Location Html starts here -->
+
+     <div class="Parentlocation">
+        <div class="Parentlocation_child1">
+            <h2>Select a location for delivery</h2>
+            <p>Choose your address location to see product availability
+                and delivery options
+            </p>
+        </div>
+        <div class="Parentlocation_child2">
+            <div>
+                <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png" alt="search logo">
+                <input type="text" id="locationInput" placeholder="Search for area or street name">
+            </div>
+        </div>
+    </div>
+
+    <!-- Location html ends here -->
+
+    <!-- Parent Navbar html starts here -->
+
+    <div class="ParentNav">
+        <div class="ParentNav_child1">
+            <a href=""><img src="https://gumlet.assettype.com/afaqs/2021-11/c9b6e415-726d-4f0b-a787-c3eff949e722/bb_Daily_with_TATA_Logo.jpg?auto=format%2Ccompress" alt="bigbasket logo"></a>
+            <input type="text" placeholder="Search for Products...">
+            <div id="ParentNav_child1_div1">
+                <img src="https://www.shareicon.net/data/256x256/2015/12/17/689050_map_512x512.png" alt="location logo">
+                <div>Select Location </div>
+            </div>
+            <div id="ParentNav_child1_div2">login/Sign Up</div>
+            <div id="Cart"><img src="https://basketballacademy.hawks.com/wp-content/uploads/2020/02/Group-5.svg" alt="Add to card logo"></div>
+        </div>
+        <div class="ParentNav_child2">
+            <button id="ShopByCategoryBtn">
+                <p>Shop by <Strong>Category</Strong></p>
+                <div><img src="https://arkitekturivirkeligheden.dk/wp-content/uploads/2018/02/white-down-arrow-png-2-e1517692151339.png"></div> 
+            </button>
+            <ul>
+                <li><a href="">Exotic Fruits and V...</a></li>
+                <li><a href="">Tea</a></li>
+                <li><a href="">Ghee</a></li>
+                <li><a href="">Nandini</a></li>
+                <li><a href="">>></a></li>
+            </ul>
+            <div><img src="http://www.bigbasket.com/media/uploads/banner_images/hp_cmc_m_offer_28_220921_all.png" alt="offer Image"></div>
+        </div>
+    </div>
+
+    <!-- ParentNavbar html ends here -->
+<div class="filterParent">
+    <div id="navbar1">
+        <button type="button" onclick="Show_filter()">Hide Filter</button>
+        <div id="navbar" class="option-container">
+        
+        
+
+            <div id="category1">
+            <p><b><a href="">Milk Plain</a></b></p>
+            <p><b><a href="">Curd</a></b></p>
+            <p><b><a href="">Butter Milk</a></b></p>
+            <p><b><a href="">Cheese</a></b></p>
+            <p><b><a href="">Flavoured Milk</a></b></p>
+            <p><b><a href="">Cheese Salted</a></b></p>
+            <p><b><a href="">Flavoured Cheese</a></b></p>
+            <p><b><a href="">Fresh Milk</a></b></p>
+            <p><b><a href="">Soya Milk</a></b></p>
+            <p><b><a href="">Agarbatti</a></b></p>
+            <p><b><a href="">Ghee & Vanaspati</a></b></p>
+            <p><b><a href="">Dessert Mix</a></b></p>
+            <p><b><a href="">Paneer, Tofu & Cream</a></b></p>
+
+            
+            </div>
+
+            <div id="supersaver">
+                <img src="https://www.bigbasket.com/media/uploads/Supersaver+Toggle+Final.png?tr=w-128,q=80" id="img" alt="img=">
+                <label >
+                    <input placeholder="Toggle" type="range" id="modeSlider" onclick="toggleMode() "><br>
+                </label>
+            </div>
+
+            
+                <button class="filter-btn" onclick="toggleFilter()">Brands</button>
+                <div  id="filterOptions">
+                    
+                    
+                    <label class="brand-checkbox">
+                    <input type="checkbox" onchange="FilterItems1()" value="brand1"> Nandni
+                    </label><br></div><br>
+                
+                    <button class="filter-btn" onclick="toggleRatings()"><b>Ratings :</b></button>
+                <div  id="Ratings">
+                    
+                    <label class="rating-checkbox">
+                    <input type="checkbox" onchange="FilterItems1()" value="5"> 5 stars
+                    </label><br>
+                    <label class="rating-checkbox">
+                    <input type="checkbox" onchange="FilterItems1()" value="4"> 4 stars
+                    </label><br>
+                    <label class="rating-checkbox">
+                    <input type="checkbox" onchange="FilterItems1()" value="3"> 3 stars
+                    </label><br>
+                    <label class="rating-checkbox">
+                    <input type="checkbox" onchange="FilterItems1()" value="2"> 2 stars
+                    </label><br>
+                    <label class="rating-checkbox">
+                    <input type="checkbox" onchange="FilterItems1()" value="1"> 1 star
+                    </label></div><br>
+                    
+                
+            
+            <label for="Discount" title="Discount">
+                
+                <select id="Discount1" name="Discount">
+                    <option onchange="FilterItems1()" value="">Discount</option>
+                    <option onchange="FilterItems1()" value="70%">Discount Above to 30%</option>
+                    <option onchange="FilterItems1()" value="50%">Discount up to 25%</option>
+                    <option onchange="FilterItems1()" value="25%">Discount below to 25%</option>
+                </select>
+            </label><br>
+
+            <button class="filter-btn" onclick="toggleCountry()"><b>Country Of Origin</b></button>
+                <div  id="Country">
+            
+                
+                <label class="Country-origin">
+                <input type="checkbox" onchange="FilterItems1()" value="Country"> Australia
+                </label><br>
+                <label class="Country-origin">
+                <input type="checkbox" onchange="FilterItems1()" value="Country"> chile
+                </label><br>
+                <label class="Country-origin">
+                <input type="checkbox" onchange="FilterItems1()" value="Country"> china
+                </label><br>
+                <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> Egypt
+                    </label><br>
+                    <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> Grece
+                    </label><br>
+                    <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> Iran
+                </label><br>
+                <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> India
+                    </label><br>
+                    <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> Itly
+                    </label><br>
+                    <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> New Zealand
+                </label>    <br>
+                
+                <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> Peru
+                    </label><br>
+                    <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> South Africa
+                    </label><br>
+                    <label class="Country-origin">
+                    <input type="checkbox" onchange="FilterItems1()" value="Country"> USA
+                    </label><br>
+            </label></div><br>
+            
+            <label for="Food Preferences">
+                <button class="filter-btn" onclick="toggleFood()"><b>Food Preferences</b></button>
+                <div  id="Food">
+                <label class="Food-Preferences">
+                    <input type="checkbox" onchange="FilterItems1()" value="Food Preferences"> Vegeterian
+                    </label><br>
+                    
+                    
+            </label></div><br>
+            
+            <label for="Product Type">
+                <button class="filter-btn" onclick="toggleproduct()"><b>Product Type</b></button>
+                <div  id="product">
+                <label class="Product-Type">
+                    <input type="checkbox" onchange="FilterItems1()" value="Product Type"> Super Saver
+                    </label>
+            </label></div><br>
+
+            
+            
+            
+            <label for="Pack Size">
+                <button class="filter-btn" onclick="togglePacking()"><b>Pack size</b></button>
+                <div  id="Packing">
+                <label class="Pack-size">
+                    <input type="checkbox" onchange="FilterItems1()" value="300g"> Upto 300g
+                    </label><br>
+            
+            <label class="Pack-size">
+                <input type="checkbox" onchange="FilterItems1()" value="4_combo"> Combo 4 item
+                </label><br>
+        
+        <label class="Pack-size">
+            <input type="checkbox" onchange="FilterItems1()" value="2_combo"> Combo 2 items
+        </label><br>
+        <label class="Pack-size">
+            <input type="checkbox" onchange="FilterItems1()" value="500g"> Upto 500g
+        </label><br>
+        <label class="Pack-size">
+            <input type="checkbox" onchange="FilterItems1()" value="90g"> Upto 80g-90g
+        </label><br>
+        <label class="Pack-size">
+            <input type="checkbox" onchange="FilterItems1()" value="6_Pcs"> 6 Pcs
+        </label><br>
+        <label class="Pack-size">
+            <input type="checkbox" onchange="FilterItems1()" value="8_Pcs"> 8 Pcs
+        </label><br>
+        <label class="Pack-size">
+            <input type="checkbox" onchange="FilterItems1()" value="1000g"> Upto 1kg
+        </label><br>
+        <label class="Pack-size">
+            <input type="checkbox" onchange="FilterItems1()" value="250g"> Upto 250g
+        </label></div><br>
+
+    </label></div>
+            
+
+        </div>
+        <div id="items">
+
+            <div class="items1">
+
+            
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/100285703_15-nandini-goodlife-toned-milk.jpg?tr=w-1920,q=80" alt="img" >
+            <p class="Item-name">GoodLife UHT Treated Milk</p>
+            <p class="Price">Price : ₹65</p>
+            <p class="Discount2">Discount : 9%</p>
+            <p class="quantity">Quantity : 1L</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/1214143_1-nandini-pure-ghee.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Nandni Pure Ghee</p>
+            <p class="Price">Price : ₹586</p>
+            <p class="Discount2">Discount : 64%</p>
+            <p class="quantity">Quantity : 2*500g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/245504_1-nandini-slim-skimmed-milk.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Skimmed Milk</p>
+            <p class="Price" >Price : ₹520</p>
+            <p class="Discount2">Discount : 25%</p>
+            <p class="quantity">Quantity : 500g pack of 20</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/1213686_1-nandini-butter-salted.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Butter-Salted</p>
+            <p class="Price">Price : ₹510</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 2*500g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/270621_6-nandini-paneer.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Fresh Paneer</p>
+            <p class="Price">Price : ₹425</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 1kg</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181592_5-nandini-cheddar-cheese-spread-pepper.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Cheese Spread Pepper</p>
+            <p class="Price">Price : ₹95</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 250g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181587_5-nandini-cheese-slice.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Chese Slice</p>
+            <p class="Price">Price : ₹390</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 750g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181593_4-nandini-cheddar-cheese-spread-capsicum.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Cheese Spread Capsicum</p>
+            <p class="Price">Price : ₹95</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 200g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181595_5-nandini-cheddar-cheese-spread-jalapeno.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Cheese Spread Jalapeno</p>
+            <p class="Price">Price : ₹95</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 200g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181591_4-nandini-cheddar-cheese-spread-plain.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Cheese Spread Plain</p>
+            <p class="Price">Price : ₹95</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 200g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/100285710_1-nandini-milk-powder-skimmed.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Skimmed Powder Milk</p>
+            <p class="Price">Price : ₹400</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 1kg</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181597_6-nandini-cheddar-cheese.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Cheddar cheese Block</p>
+            <p class="Price">Price : ₹500</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 1kg</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181594_4-nandini-cheddar-cheese-spread-chilly-garlic.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Cheese Spread Chillyr</p>
+            <p class="Price">Price : ₹95/p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 200g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006934_2-nandini-mix-gulab-jamoon.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Mix Gulab Jamoon</p>
+            <p class="Price">Price : ₹80</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 200g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006935_2-nandini-vermicelli-payasa-instant-magic-mix.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Vermicelli Payasa Magic Mix</p>
+            <p class="Price">Price : ₹90</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 200g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/257406_4-nandini-flavoured-milk-pista.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Flavoured Milk Pista</p>
+            <p class="Price">Price : ₹25</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 200g</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006910_7-nandini-goodlife-gold-homogenised-standardised-milk.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">GoodLife Gold Homogenised Milk</p>
+            <p class="Price">Price : ₹78</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 1L</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40066288_3-nandini-smart-doble-toned-milk.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Smart Double Tonned Milk</p>
+            <p class="Price">Price : ₹70</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 1L</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181590_5-nandini-processed-cheese-block.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Processed Cheese Block</p>
+            <p class="Price">Price : ₹500</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 1kg</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40087583_2-nandini-computer-sambrani.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Computer Sambrani</p>
+            <p class="Price">Price : ₹18</p>
+            <p class="Discount2">Discount : 0%</p>
+            <p class="quantity">Quantity : 1pcs</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40087585_2-nandini-computer-sambrani-4-in-1.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Computer Sambrani 4 In 1</p>
+            <p class="Price">Price : ₹18.5</p>
+            <p class="Discount2">Discount : 40%</p>
+            <p class="quantity">Quantity : 1pcs/p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            <div class="items1">
+            <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/10000093_16-fresho-coconut-medium.jpg?tr=w-1920,q=80" alt="img">
+            <p class="Item-name">Coconut-medium</p>
+            <p class="Price">Price : ₹25</p>
+            <p class="Discount2">Discount : 38%</p>
+            <p class="quantity">Quantity : 1pcs</p>
+            <button class="addtocart" >Add to Cart</button>
+            
+        </div>
+
+            
+            <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/1214143_1-nandini-pure-ghee.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Nandni Pure Ghee</p>
+                <p class="Price">Price : ₹586</p>
+                <p class="Discount2">Discount : 64%</p>
+                <p class="quantity">Quantity : 2*500g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/245504_1-nandini-slim-skimmed-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Skimmed Milk</p>
+                <p class="Price" >Price : ₹520</p>
+                <p class="Discount2">Discount : 25%</p>
+                <p class="quantity">Quantity : 500g pack of 20</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/1213686_1-nandini-butter-salted.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Butter-Salted</p>
+                <p class="Price">Price : ₹510</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 2*500g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/270621_6-nandini-paneer.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Fresh Paneer</p>
+                <p class="Price">Price : ₹425</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181592_5-nandini-cheddar-cheese-spread-pepper.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Pepper</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 250g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181587_5-nandini-cheese-slice.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Chese Slice</p>
+                <p class="Price">Price : ₹390</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 750g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181593_4-nandini-cheddar-cheese-spread-capsicum.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Capsicum</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181595_5-nandini-cheddar-cheese-spread-jalapeno.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Jalapeno</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181591_4-nandini-cheddar-cheese-spread-plain.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Plain</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/100285710_1-nandini-milk-powder-skimmed.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Skimmed Powder Milk</p>
+                <p class="Price">Price : ₹400</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181597_6-nandini-cheddar-cheese.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheddar cheese Block</p>
+                <p class="Price">Price : ₹500</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181594_4-nandini-cheddar-cheese-spread-chilly-garlic.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Chillyr</p>
+                <p class="Price">Price : ₹95/p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006934_2-nandini-mix-gulab-jamoon.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Mix Gulab Jamoon</p>
+                <p class="Price">Price : ₹80</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006935_2-nandini-vermicelli-payasa-instant-magic-mix.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Vermicelli Payasa Magic Mix</p>
+                <p class="Price">Price : ₹90</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/257406_4-nandini-flavoured-milk-pista.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Flavoured Milk Pista</p>
+                <p class="Price">Price : ₹25</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006910_7-nandini-goodlife-gold-homogenised-standardised-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">GoodLife Gold Homogenised Milk</p>
+                <p class="Price">Price : ₹78</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1L</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40066288_3-nandini-smart-doble-toned-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Smart Double Tonned Milk</p>
+                <p class="Price">Price : ₹70</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1L</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181590_5-nandini-processed-cheese-block.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Processed Cheese Block</p>
+                <p class="Price">Price : ₹500</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40087583_2-nandini-computer-sambrani.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Computer Sambrani</p>
+                <p class="Price">Price : ₹18</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1pcs</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40087585_2-nandini-computer-sambrani-4-in-1.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Computer Sambrani 4 In 1</p>
+                <p class="Price">Price : ₹18.5</p>
+                <p class="Discount2">Discount : 40%</p>
+                <p class="quantity">Quantity : 1pcs/p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/10000093_16-fresho-coconut-medium.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Coconut-medium</p>
+                <p class="Price">Price : ₹25</p>
+                <p class="Discount2">Discount : 38%</p>
+                <p class="quantity">Quantity : 1pcs</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+
+                
+            <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/1214143_1-nandini-pure-ghee.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Nandni Pure Ghee</p>
+                <p class="Price">Price : ₹586</p>
+                <p class="Discount2">Discount : 64%</p>
+                <p class="quantity">Quantity : 2*500g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/245504_1-nandini-slim-skimmed-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Skimmed Milk</p>
+                <p class="Price" >Price : ₹520</p>
+                <p class="Discount2">Discount : 25%</p>
+                <p class="quantity">Quantity : 500g pack of 20</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/1213686_1-nandini-butter-salted.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Butter-Salted</p>
+                <p class="Price">Price : ₹510</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 2*500g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/270621_6-nandini-paneer.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Fresh Paneer</p>
+                <p class="Price">Price : ₹425</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181592_5-nandini-cheddar-cheese-spread-pepper.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Pepper</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 250g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181587_5-nandini-cheese-slice.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Chese Slice</p>
+                <p class="Price">Price : ₹390</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 750g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181593_4-nandini-cheddar-cheese-spread-capsicum.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Capsicum</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181595_5-nandini-cheddar-cheese-spread-jalapeno.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Jalapeno</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181591_4-nandini-cheddar-cheese-spread-plain.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Plain</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/100285710_1-nandini-milk-powder-skimmed.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Skimmed Powder Milk</p>
+                <p class="Price">Price : ₹400</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181597_6-nandini-cheddar-cheese.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheddar cheese Block</p>
+                <p class="Price">Price : ₹500</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181594_4-nandini-cheddar-cheese-spread-chilly-garlic.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Chillyr</p>
+                <p class="Price">Price : ₹95/p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006934_2-nandini-mix-gulab-jamoon.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Mix Gulab Jamoon</p>
+                <p class="Price">Price : ₹80</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006935_2-nandini-vermicelli-payasa-instant-magic-mix.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Vermicelli Payasa Magic Mix</p>
+                <p class="Price">Price : ₹90</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/257406_4-nandini-flavoured-milk-pista.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Flavoured Milk Pista</p>
+                <p class="Price">Price : ₹25</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006910_7-nandini-goodlife-gold-homogenised-standardised-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">GoodLife Gold Homogenised Milk</p>
+                <p class="Price">Price : ₹78</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1L</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40066288_3-nandini-smart-doble-toned-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Smart Double Tonned Milk</p>
+                <p class="Price">Price : ₹70</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1L</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181590_5-nandini-processed-cheese-block.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Processed Cheese Block</p>
+                <p class="Price">Price : ₹500</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40087583_2-nandini-computer-sambrani.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Computer Sambrani</p>
+                <p class="Price">Price : ₹18</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1pcs</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40087585_2-nandini-computer-sambrani-4-in-1.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Computer Sambrani 4 In 1</p>
+                <p class="Price">Price : ₹18.5</p>
+                <p class="Discount2">Discount : 40%</p>
+                <p class="quantity">Quantity : 1pcs/p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/10000093_16-fresho-coconut-medium.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Coconut-medium</p>
+                <p class="Price">Price : ₹25</p>
+                <p class="Discount2">Discount : 38%</p>
+                <p class="quantity">Quantity : 1pcs</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+
+                
+            <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/1214143_1-nandini-pure-ghee.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Nandni Pure Ghee</p>
+                <p class="Price">Price : ₹586</p>
+                <p class="Discount2">Discount : 64%</p>
+                <p class="quantity">Quantity : 2*500g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/245504_1-nandini-slim-skimmed-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Skimmed Milk</p>
+                <p class="Price" >Price : ₹520</p>
+                <p class="Discount2">Discount : 25%</p>
+                <p class="quantity">Quantity : 500g pack of 20</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/1213686_1-nandini-butter-salted.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Butter-Salted</p>
+                <p class="Price">Price : ₹510</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 2*500g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/270621_6-nandini-paneer.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Fresh Paneer</p>
+                <p class="Price">Price : ₹425</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181592_5-nandini-cheddar-cheese-spread-pepper.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Pepper</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 250g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181587_5-nandini-cheese-slice.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Chese Slice</p>
+                <p class="Price">Price : ₹390</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 750g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181593_4-nandini-cheddar-cheese-spread-capsicum.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Capsicum</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181595_5-nandini-cheddar-cheese-spread-jalapeno.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Jalapeno</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181591_4-nandini-cheddar-cheese-spread-plain.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Plain</p>
+                <p class="Price">Price : ₹95</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/100285710_1-nandini-milk-powder-skimmed.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Skimmed Powder Milk</p>
+                <p class="Price">Price : ₹400</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181597_6-nandini-cheddar-cheese.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheddar cheese Block</p>
+                <p class="Price">Price : ₹500</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181594_4-nandini-cheddar-cheese-spread-chilly-garlic.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Cheese Spread Chillyr</p>
+                <p class="Price">Price : ₹95/p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006934_2-nandini-mix-gulab-jamoon.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Mix Gulab Jamoon</p>
+                <p class="Price">Price : ₹80</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006935_2-nandini-vermicelli-payasa-instant-magic-mix.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Vermicelli Payasa Magic Mix</p>
+                <p class="Price">Price : ₹90</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/257406_4-nandini-flavoured-milk-pista.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Flavoured Milk Pista</p>
+                <p class="Price">Price : ₹25</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 200g</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40006910_7-nandini-goodlife-gold-homogenised-standardised-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">GoodLife Gold Homogenised Milk</p>
+                <p class="Price">Price : ₹78</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1L</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40066288_3-nandini-smart-doble-toned-milk.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Smart Double Tonned Milk</p>
+                <p class="Price">Price : ₹70</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1L</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40181590_5-nandini-processed-cheese-block.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Processed Cheese Block</p>
+                <p class="Price">Price : ₹500</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1kg</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40087583_2-nandini-computer-sambrani.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Computer Sambrani</p>
+                <p class="Price">Price : ₹18</p>
+                <p class="Discount2">Discount : 0%</p>
+                <p class="quantity">Quantity : 1pcs</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/40087585_2-nandini-computer-sambrani-4-in-1.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Computer Sambrani 4 In 1</p>
+                <p class="Price">Price : ₹18.5</p>
+                <p class="Discount2">Discount : 40%</p>
+                <p class="quantity">Quantity : 1pcs/p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+    
+                <div class="items1">
+                <img class="img1" src="https://www.bigbasket.com/media/uploads/p/m/10000093_16-fresho-coconut-medium.jpg?tr=w-1920,q=80" alt="img">
+                <p class="Item-name">Coconut-medium</p>
+                <p class="Price">Price : ₹25</p>
+                <p class="Discount2">Discount : 38%</p>
+                <p class="quantity">Quantity : 1pcs</p>
+                <button class="addtocart" >Add to Cart</button>
+                
+            </div>
+                
+
+    </div>
+    <button type="button" onclick="Show_relevence()">Relevence </button>
+                <div id="ShowRelevence">
+                    
+                </div>
+
+</div>
+    
+    <script>
+
+let arr = [
+    {
+        "Fruits & Vegetables" : 
+            {
+                "Cuts & Sprouts" : ["Cut & Peeled Veggies", "Cut Fruit, Tender Coconut", "Fresh Juices & Milkshakes", "Fresh Salads & Sprouts", "Recipe Packs"],
+                "Exotic Fruits & Veggies" : ["Exotic Fruits", "Exotic Vegetables"],
+                "Flower Bouquets, Bunches" : ["Marigold", "Other Flowers", "Roses"],
+                "Fresh Fruits": ["Apples & Pomegranate", "Banana, Sapota & Papaya", "Fruit Baskets", "Kiwi, Melon, Citrus fruit", "Mangoes", "Seasonal Fruits"],
+                "Fresh Vegetables" : ["Beans, Brinjals & Okra","Cabbage & Cauliflower", "Cucumber & Capsicum", "Gourd, Pumpkin, Drumstick", "Leafy Vegetables", "Potato, Onion & Tomato", "Root Vegetables", "Specialty"],
+                "Herbs & Seasonings" : ["Indian & Exotic Herbs", "Lemon , Ginger & Garlic"],
+                "Organic Fruits & Vegetables" : ["Organic Fruits", "Organic Vegetables"]
+                
+            }
+    },
+    {
+        "Foodgrains, Oil & Masala" : 
+            {
+                "Atta, Flours & Sooji" : ["Atta Whole Wheat", "Rice & Other Flours", "Sooji, Maida & Besan"],
+                "Dals & Pulses" : ["Cereals & Millets", "Toor , Channa & Moong Dal"],
+                "Dry Fruits" : ["Almonds", "Cashews", "Mukhwas", "Other Dry Fruits", "Raisins"],
+                "Edible Oils & Ghee" : ["Blended Cooking Oils", "Cold Pressed Oil", "Cooking Coconut Oil", "Cotton Seed Oil", "Ghee & Vanaspati", "Gingelly Oil", "Groundnut Oil", "Olive & Canola Oils", "Other Edible Oils", "Soya & Mustard Oils", "Sunflower, Rice Bran Oil"],
+                "Masalas & Spices" : ["Blended Masalas", "Cooking Pastes", "Herbs & Seasoning", "Powdered Spices", "Whole Spices"],
+                "Organic Staples" : ["Organic Dals & Pulses", "Organic Dry Fruits", "Organic Edible Oil, Ghee", "Organic Flours", "Organic Masalas & Spices", "Organic Millet & Flours", "Organic Rice, Other Rice", "Organic Sugar, Jaggery"],
+                "Rice & Rice Products" : ["Basmati Rice", "Boiled & Steam Rice", "Poha, Sabudana & Murmura", "Raw Rice"],
+                "Salt, Sugar & Jaggery" : ["Salts", "Sugar & Jaggery", "Sugarfree Sweeteners"]
+            } 
+    },
+    {
+        "Bakery, Cakes & Dairy" : 
+            {
+                "Bakery Snacks" : ["Bread Sticks & Lavash", "BreadCrumbs & Croutons", "Cheese & Garlic Bread", "Puffs, Patties, Sandwiches"],
+                "Breads & Buns" : ["Brown, Wheat & Multigram", "Buns, Pavs & Pizza Base", "Milk, White & Sandwich"],
+                "Cakes & Pastries" : ["Birthday & Party Cakes", "Doughnuts & Mousses", "Muffins & Cup Cakes", "Pastries & Brownies", "Tea Cakes & Slice Cakes"],
+                "Cookies, Rusk & Khari" : ["Bakery Biscuits, Cookies", "Healthy Organic Cookies", "Khari & Cream Rolls","Premium Cookies", "Rusks"],
+                "Dairy" : ["Butter & Margarine", "ButterMilk and Lassi", "Cheese" , "Condensed PowderMilk", "Curd", "Flovoured, Soya Milk", "Fresh Milk", "Milk", "Paneer, Tofu & Cream", "Yogurt & Shrikhand"],
+                "Gourmet Breads": ["Bagels & Baguette", "Croissants, Bagels", "Gourmet Bread", "Panini , Focaccia & Pita"],
+                "Ice Creams & Desserts" : ["Ice Creams"],
+                "Non Dairy" : ["Dairy Free (Vegan)"]
+            }
+    },
+    {
+        "Beverages" : 
+            {
+                "Coffee" : ["Ground Coffee", "Instant Coffee"], 
+                "Energy & Soft Drinks" : ["Cold Drinks", "Icetea, Non Aerated Drink", "Non Alcoholic Drink", "Soda & Cocktail Mix", "Sports & Energy Drinks"],
+                "Fruit Juices & Drinks" : ["Juices", "Syrups & concentrates", "Unsweetened Cold Press"],
+                "Health Drink, Supplement" : ["Childrens (2-5 Yrs)","Diabetic drinks", "Glucose Powder, Tablets", "Kids(5+Yrs)", "Mens & Women"],
+                "Tea" : ["Exotic & Flavoured Tea","Green Tea", "Leaf & Dust Tea","Tea Bags"],
+                "Water" : ["Flavoured Wated", "Packed Wated", "Spring Wated"]
+            }
+    },
+    {
+        "Snacks & Branded Foods" : 
+            {
+                "Biscuits & Cookies" : ["Cookies", "Cream Biscuits & Wafers", "Glucose & Milk biscuits", "Marie , Health, Digestive", "Salted Biscuits"],
+                "Breakfast Cereals" : ["Flakes", "Granola & Cereal Bars", "Kids Cereal", "Muesli", "Oats & Porridge"], 
+                "Chocolates & Candies" : ["Chocolates", "Gift Boxes", "Mints & Chewing Gums", "Toffy , Candy & Lollypop"],
+                "Frozen Veggies & Snacks" : ["Frozen Indian Breads", "Frozen Non-Veg Snacks", "Frozen Veg-Snacks", "Frozen Vegetables"],
+                "Indian Mithai" : ["Chikki & Gajjak", "Fresh Sweets", "Tinned, Packed Sweets"],
+                "Noodle, Pasta, Vermicelli" : ["Cup Noodles", "Hakka Noodles", "Instant Noodles", "Pasta & Macaroni", "Vermicelli"],
+                "Pickles & Chutney" : ["Chutney Powder", "Lime & Mango Pickle", "Non-Veg Pickle", "Other Veg-Pickle"],
+                "Ready To Cook & Eat" : ["Breakfast & Sancks Mix", "Canned Food", "Dessert Mixes", "Heat & Eat Ready Meals", "Home Baking", "Papad ,Ready to Fry", "Soups"],
+                "Snacks & Namkeen" : ["Chips & Corn Snacks", "Namkeen & Savoury Snacks"],
+                "Spreads, Sauces, Ketchup" : ["Chilli & Soya Sauce", "Coco & Nut Spread", "Dips & Dressing", "Honey", "Jam, Conserve & Marmalade", "Mayonnaise", "Tomato Ketchup & Sauces", "Vinegar"]
+            }
+    },
+    {
+        "Beauty & Hygiene" : 
+            {
+                "Bath & Hand Wash" : ["Bath Salts & Oils", "Bathing Accessories", "Bathing Bars & Soaps", "Body Scrubs & Exfoliants", "Hand Wash & Sanitizers", "Shower Gel & Body Wash", "Talcum Powder"],
+                "Feminine Hygiene" : ["Hair Removal", "Intimate Wash & Care", "Panty Liners", "Sanitary Napkins", "Tampons & Menstrual Cups"],
+                "Fragrances & Deos" : ["Attar", "Body Sprays and Mists", "Eau De Cologne", "Eau De Parfum", "Eau De Toilette", "Gift Sets", "Men's Deodrants", "Perfume", "Women's Deodrants"],
+                "Hair Care" : ["Dry Shampoo & Conditioner", "Hair & Scalp Treatment", "Hair Color", "Hair Styling", "Shampoo & Conditioner", "Tools & Accessories"],
+                "Health & Medicine" : ["Adult Diapers", "Antiseptic & Bandages", "Ayurveda", "Cotton & Ear Buds", "Everyday Medicine", "Face Masks & Safety Gears", "Sexual Wellness", "Slimming Products", "Supplements & Proteins"],
+                "Makeup" : ["Eyes", "Face", "lips", "Makeup Accessories", "Makeup Kits & Gift Sets", "Nails"],
+                "Men's Grooming" : ["Bath & Shower", "Combos & Gift Sets", "Deodrant", "Face & Body", "Hair care & Styling", "Moustache & Beard Card", "Shaving Care", "Talc"],
+                "Oral Care" : ["Electric Toothbrush", "Floss & Tongue Cleaner", "MouthWash", "Toothbrush", "Toothpaste"],
+                "Skin care" : ["Aromatherapy", "Body Care", "Eye Care", "Face Care", "Lip Care"]
+            }
+    },
+    {
+        "Cleaning & Household" : 
+            {
+                "All Purpose Cleaners": ["Disinfectant Spray and Cleaner", "Floor & Other Cleaners", "Imported Cleaners", "Kitchen, Glass & Drains", "Metal, Furniture Cleaner", "Toilet Cleaners"],
+                "Bins & Bathroom Ware" : ["Bath Stools, Basin & Sets", "Buckets & Mugs", "Dustbins", "Hangers Clips & Rope", "Laundry, Storage Baskets", "Other Plastic Ware", "Soap Cases & Dispensers"],
+                "Car & Shoe Care" : ["Car Freshner", "Car Polish & Cleaner", "Shoe Polish", "Shoe Shiners & Brushes"],
+                "Detergents & Dishwash" : ["Descaler", "Detergent Bars", "Detergent Powder & Liquid", "Diswash Bars & Powder", "Diswash Liquids & Pastes", "Fabric Pre, Post Wash", "Imported Home Care"],
+                "Disposables, Garbage Bag" : ["Aluminium Foil, Clingwrap", "Garbage Bags", "Kitchen Rolls", "Paper napkins , Tissue Box", "Toilet Paper", "Wet Wipe, Pocket Tissues"],
+                "Fresheners & Repellents" : ["Air Freshner", "Insect Repellent", "Mosquito Repellent"],
+                "Mops, Brushes & Scrubs" : ["Brooms & Dust Pans", "Dust Cloth & Wipes", "Mops & Wipers", "Toilet & Other Brushes", "Utensil Scrub-Pad, Glove"],
+                "Party & Festive Needs" : ["Caps, Balloons & Candles", "Decorations", "Disposable Cups & Plates", "Gift wraps & Bags", "Gifts", "Seasonal Accessories"],
+                "Pooja Needs" : ["Agarbatti, Incense Sticks", "Camphor & Wicks", "Candles & Match Box", "Lamp & Lamp Oil", "Other Pooja Needs", "Pooja Thali & Bells"],
+                "Stationery" : ["Books & Magazines", "Colours & Crayons", "Electric Accessories", "Erasers & Sharpners", "Exam Pad & Pencil Box", "Games & Calculator", "Notebooks Files & Folders", "Pen, Pencils", "Scissor, Glue & Tape"]
+            }
+    },
+    {
+        "Kitchen , Garden & Pets" : 
+            {
+                "Appliances & Electricals" : ["Air Fryers & Rice Cookers", "Battery & Electrical", "Coffee Makers & Kettles", "Grills & Toasters", "Induction Cooktop", "Irons", "Juicer , Mixer & Grinder", "LED Bulbs & Batters"],
+                "Bakeware" : ["Bakeware Accessories", "Bakeware Moulds, Cutters", "Baking Tools & Brushes"],
+                "Cookware & Non Stick" : ["Cook & Serve", "Cookware Sets", "Gas Stove", "Kadai & Fry Pans", "Microwavable Cookware", "Pressure Cookers", "Tawa & Sauce Pan"],
+                "Crockery & Cutlery" : ["Cups ,Mugs & Tumblers", "Cutlery, Spoon & Fork", "Dinner Sets", "Glassware", "Plates & Bowls"],
+                "Flask & Casserole" : ["Casserole", "Vacuum Flask"],
+                "Gardening" : ["Fertilizer & Pesticides", "Gardening Tools", "Pots, Planters & Trays", "Seeds & Saplings"],
+                "Kitchen Accessories" : ["Choppers & Graters", "Kitchen Tools & Other Access...", "Knives & Peelers", "Lighters", "Strainer, Ladle & Spatula"],
+                "Pet Food & Accessories" : ["Health Supplements", "Pet cleaning & Grooming", "Pet Collars & Leashers", "Pet Meals & Treas", "Pet toys"],
+                "Steel Utensils" : ["Bowls & Vessels", "Copper Utensils", "Plates & Tumblers", "Steel Lunch Box", "Steel Storage Container"],
+                "Storage & Accessories" : ["Cloth Dryer & Iron Table", "Containers Sets", "Lunch Boxes", "Racks & Holders", "Umbrella", "Wall Hooks & Hangers", "Water & Fridge Bottles"]
+            }
+    },
+    {
+        "Eggs, Meat & Fish" : 
+            {
+                "Eggs" : ["Country Eggs", "Farm Eggs", "Other Eggs", "Protein Eggs"],
+                "Fish & Seafood" : ["Canned Seafood", "Dry Fish", "Fresh Water Fish", "Frozen Fish & Seafood", "Marine Water Fish", "Other Seafood", "Praws & Shrimps"],
+                "Marinades" : ["Marinated Meat"],
+                "Mutton & Lamb" : ["Fresh Mutton", "Frozen Mutton"],
+                "Pork & Other Meats" : ["Fresh & Frozen Pork"],
+                "Poultry" : ["Duck & Goose", "Fresh Chicken","Frozen Chicken", "Turkey"],
+                "Sausages, Bacon & Salami" : ["Chicken Sausages", "Lamb", "Pork & Ham","Turkey & Duck"]
+            }
+    },
+    {
+        "Gourmet & World Food" : 
+            {
+                "Cereals & Breakfast" : ["Cereal & Granola Bars","Gourmet Flakes","Imported Oats & Porridge","Muesli & Rice Cakes"],
+                "Chocolates & Biscuits" : ["Cookies, Biscottie, Wafer","Crackers & Digestive","International Chocolates","Luxury Chocolates, Gifts","Marshmallow, Candy, Jerry"],
+                "Cooking & Baking Needs" : ["Baking Accessories","Baking ,Cake Decorations","Cooking Chocolate,Cocoa","Curry Pasta, Coconut Milk","Exotic Sugar & Salt","Flour & Pre-Mixes","Herbs, Seasoning & Rubs","Quinoa & Grains"],
+                "Dairy & Cheese" : ["Butter & Cream","Cream & Cheese Spreads","Flavoured & Greek Yogurt","Gourmet Ice Cream","International Cheese","Milk & Soya Drinks","Tofu"],
+                "Drinks & Beverages" : ["Aerated,Still,Sparkling","Cocktail Mixes","Coffee & Pre-Mix","Gourmet Juices & Drinks","Gourmet Tea & Tea Bags","Health Drinks","Non-Alcoholic Beer,Wine"],
+                "Oils & Vinegar" : ["Balsamic & Cider Vinegar","Canola & Rapeaseed Oil","Extra Virgin Olive Oil", "Flavoured & Other Oils", "Organic & Cold Press Oil", "Pure, Pomace Olive Oil", "Regualar & White Vinegar", "Wine & Rice Vinegar"],
+                "Pasta, Soup & Noodles" : ["Imported Noodles", "Imported Soups", "Jasmine & Sushi Rice", "Pastas & Spaghetti"],
+                "Sauces, Spreads & Dips" : ["Chocolate, Peanut Spread", "Honey & Maple Syrup" ,"Hummus, Cheese, Salsa Dip", "Jams, Marmalade, Spreads", "Salad Dressings", "Thai & Asain Sauces"],
+                "Snacks, Dry Fruits, Nuts" : ["Dry Fruits & Berries", "Gourmet Popcorn", "Healthy, Baked Snacks", "Nachos & Chips", "Roasted Seeds & Nuts", "Trail & Cocktail Mixes"],
+                "Tinned & Processed Food" : ["Beans & Pulses", "Fish & Tuna", "Fruits & Pulps", "Meats & Sausages", "Olive, Jalapeno, Gherkin", "Tomatoes & Vegetables"]
+            }
+    },
+    {
+        "Baby Care" : 
+            {
+                "Baby Accessories" : ["Baby Gear & Outdoor", "Baby Toys", "Combs , Brushes, Clippers", "Kids Deo", "Other Baby Accessories", "Soothers & Teethers"],
+                "Baby Bath & Hygiene" : ["Baby Bath", "Baby Buds", "Baby Creams & Lotions", "Baby Gift Sets", "Baby Health", "Baby laundry", "Baby Oil & Shampoo", "Baby Oral Care", "Baby Powder"],
+                "Baby Food & Formula" : ["Baby Food", "Infant Formula", "Lactose Free Baby Food & Fo...", "Organic Baby Food"],
+                "Diapers & Wipes" : ["Baby Wipes", "Diapers", "Nappies & Rash Cream"],
+                "Feeding & Nursing" : ["Baby Dishes & Utensils", "Bibs & Napkins", "Nursing Tools", "Sippers & Bottles"],
+                "Mothers & Maternity" : ["Meternity Health Supplements", "Meternity Personal Care"]
+            }
+    },
+    {
+        "Paan Corner" : 
+            {
+                "Smoking Supplies" : ["Quit Smoking Alternatives", "Smoking Accessories"]
+            }
+    }
+]
+
+// Category code start from here
+
+function appendCategoryData(){
+
+    let parentCategorydiv1 = document.querySelector(".parentCategorydiv1")
+
+    arr.forEach(function(ele){
+        for(let key in ele){
+
+            let childDiv = document.createElement("div")
+            childDiv.append(key)
+            childDiv.setAttribute("id", "childDiv")
+            childDiv.addEventListener("mouseover", function(){
+
+                let parentCategorydiv2 = document.querySelector(".parentCategorydiv2")
+                parentCategorydiv2.innerHTML = ""
+
+                for(let innerKey in ele[key]){
+
+                    let childDiv2 = document.createElement("div")
+                    childDiv2.id = "childDiv2"
+                    childDiv2.append(innerKey)
+                    childDiv2.addEventListener("mouseover", function(){
+
+                        let parentCategorydiv3 = document.querySelector(".parentCategorydiv3")
+                        parentCategorydiv3.innerHTML = ""
+
+                        for(let innerList of ele[key][innerKey]){
+                            let childDiv3 = document.createElement("div")
+                            childDiv3.id = "childDiv3"
+                            childDiv3.append(innerList)
+                            parentCategorydiv3.append(childDiv3)
+                        }
+                    })
+                    parentCategorydiv2.append(childDiv2)
+                }
+                
+            })
+            parentCategorydiv1.append(childDiv)
+
+        }
+    })
+    
+}
+
+appendCategoryData()
+
+// Category Code Ends Here
+
+    
+// Category Code stars form here
+
+CategoryBtn = document.querySelector(".ParentNav_child2 > button")
+CategoryBtn.addEventListener("click", function(){
+
+    let parentCategory = document.querySelector(".parentCategory")
+    // parentCategory.style.transition = "all 2s"
+
+    if(parentCategory.style.display === "none"){
+        parentCategory.style.display = "flex"
+
+        CategoryBtn.addEventListener("mouseover", function(){
+
+            parentCategory.style.width = "50%"
+            parentCategory.style.height = "500px"
+        })
+
+        CategoryBtn.addEventListener("mouseout", function(){
+            parentCategory.style.width = "50%"
+            parentCategory.style.height = "500px"
+        })
+    }
+    else{
+        parentCategory.style.display = "none"
+        parentCategory.style.width = "20%"
+        parentCategory.style.height = "200px"
+    
+    }
+})
+
+// Category Code Ends Here
+
+// Location Code starts form here
+
+let SelectLocationBtn = document.querySelector("#ParentNav_child1_div1")
+let Parentlocation = document.querySelector(".Parentlocation")
+
+SelectLocationBtn.addEventListener("click", function(){
+    
+
+    if(Parentlocation.style.display === "none"){
+        Parentlocation.style.display = "flex"
+        SelectLocationBtn.addEventListener("mouseover", function(){
+          Parentlocation.style.width = "300px"  
+          Parentlocation.style.height = "150px"
+        })
+        SelectLocationBtn.addEventListener("mouseout", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+    }
+    else{
+        Parentlocation.style.display = "none"
+        Parentlocation.style.width = "100px"
+        Parentlocation.style.height = "100px"
+    }
+
+})
+
+let Cart = document.querySelector("#Cart")
+
+Cart.addEventListener("click", function(){
+
+    if(Parentlocation.style.display === "none"){
+        Parentlocation.style.display = "flex"
+        Cart.addEventListener("mouseover", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+        Cart.addEventListener("mouseout", function(){
+            Parentlocation.style.width = "300px"
+            Parentlocation.style.height = "150px"
+        })
+    }
+    else{
+        Parentlocation.style.display = "none"
+        Parentlocation.style.width = "100px"
+        Parentlocation.style.height = "100px"
+    }
+})
+
+let ExoticFruitsVeggies = document.querySelectorAll(".ParentNav_child2 > ul > li > a")
+console.log(ExoticFruitsVeggies)
+
+let pages = ["exoticFruitsVegetables.html", "tea.html", "Ghee page.html", "Nandini.html"]
+
+for(let x = 0; x < pages.length; x++){
+    ExoticFruitsVeggies[x].href = pages[x]
+    // console.log(ExoticFruitsVeggies[x])
+}
+
+let homePage = document.querySelector(".ParentNav_child1 > a")
+homePage.href = "HomePage.html"
+
+
+
+// Category Code Ends Here
+
+        
+    var isOn = false;
+
+    function toggleMode() {
+    var slider = document.getElementById("modeSlider");
+
+    if (isOn) {
+        slider.removeAttribute("checked");
+    } else {
+        slider.setAttribute("checked", "checked");
+    }
+
+    isOn = !isOn;
+      // Automatically slide the slider
+    slider.value = isOn ? 100 : 0;
+    }
+
+    function addcart() {
+        
+    }
+
+    function Show_filter() {
+        var optionContainer = document.getElementById("navbar");
+        optionContainer.style.display = (optionContainer.style.display === "none" || optionContainer.style.display === "") ? "block" : "none" ;
+
+    }
+
+    function toggleFilter() {
+        var filter1 = document.getElementById("filterOptions");
+        filter1.style.display = (filter1.style.display === "none" || filter1.style.display === "") ? "block" : "none" ;
+    }
+    
+    function toggleRatings() {
+        var filter2 = document.getElementById("Ratings");
+        filter2.style.display = (filter2.style.display === "none" || filter2.style.display === "") ? "block" : "none" ;
+    }
+
+    function toggleCountry() {
+        var filter3 = document.getElementById("Country");
+        filter3.style.display = (filter3.style.display === "none" || filter3.style.display === "") ? "block" : "none" ;
+    }
+
+    function toggleFood() {
+        var filter4 = document.getElementById("Food");
+        filter4.style.display = (filter4.style.display === "none" || filter4.style.display === "") ? "block" : "none" ;
+    }
+
+    function toggleproduct() {
+        var filter5 = document.getElementById("product");
+        filter5.style.display = (filter5.style.display === "none" || filter5.style.display === "") ? "block" : "none" ;
+    }
+
+    function toggleSeasonal() {
+        var filter6 = document.getElementById("Seasonal");
+        filter6.style.display = (filter6.style.display === "none" || filter6.style.display === "") ? "block" : "none" ;
+    }
+
+    function togglePacking() {
+        var filter7 = document.getElementById("Packing");
+        filter7.style.display = (filter7.style.display === "none" || filter7.style.display === "") ? "block" : "none" ;
+    }
+
+    function FilterItems1() {
+        var selectedOptions = document.querySelectorAll('.option-container input:checked');
+        var itemsN = document.querySelectorAll('.class');
+
+        itemsN.forEach(function(quantity){
+            item.style.display = "none"
+        });
+
+        selectedOptions.forEach(function(option){
+            var className = option.value;
+            items.forEach(function(item){
+                if(item.classList.contains(className)){
+                    item.style.display = "block"
+                }
+            });
+        });
+            
+        
+    }
+    </script> 
+    
+</body>
+</html>
